@@ -1,0 +1,11 @@
+{
+	"IP": "172.20.6.40",
+	"Port": 8087,
+	"User": "root",
+	"Password": "12345678",
+	"BeforeSleep": 60000,
+	"CmdList": [
+		{ "Cmd": "ls", "Sleep": 300 },
+		{ "Cmd": "reboot", "Sleep": 300 }		
+	]
+}

@@ -1,0 +1,35 @@
+namespace LibUtils;
+
+public enum UpdateMainWinBoolType
+{
+	umtIsTasking,
+	umtIsConnecting,
+	umtIsOpenedATPort,
+	umtFreezeChange,
+	umtSetTopOpenView,
+	umtLoggingSwitch,
+	umtLoggingTempSwitch,
+	umtRefreshCurTasks,
+	umtUpdateTaskConfigATUStatus,
+	umtTestSwitch,
+	umtCloseTopMostWin,
+	umtUpdatePack,
+	umtShowAnalysisTab,
+	umtConnectClick,
+	umtSceneControlText,
+	umtReloadForceNetwork,
+	umtCloseLoadingTip,
+	umtUpdateADBPort,
+	umtSaveCurProject,
+	umtSaveProjectClick,
+	umtSaveAsProjectClick,
+	umtSaveProjectCurSheetClick,
+	umtSaveAsProjectCurSheetClick,
+	umtNewProjectClick,
+	umtOpenProjectClick,
+	umtRefreshLvItemFilter,
+	umtRefreshLvItemCustomParam,
+	umtATUAdminWinNew,
+	umtATUAdminWinCtrlEnable,
+	umtAutoCheck
+}

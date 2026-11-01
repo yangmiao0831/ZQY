@@ -1,0 +1,9 @@
+namespace SenseShield;
+
+public enum CERT_TYPE : uint
+{
+	CERT_TYPE_ROOT_CA,
+	CERT_TYPE_DEVICE_CA,
+	CERT_TYPE_DEVICE_CERT,
+	CERT_TYPE_SENSE_DEVICE_CERT
+}

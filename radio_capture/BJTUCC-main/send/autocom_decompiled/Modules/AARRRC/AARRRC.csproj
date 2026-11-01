@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>AARRRC</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net45</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="MgJsjLGT3MpsVrZTQq.6nNS9xfjpxWlYMNLyD" />
+    <None Remove="XOSvimqvJsMoI7sjJ8.jo2buvWZgMt5UydGn1" />
+    <None Remove="6jGNmYIZyo8gFoeDJn.gSC6mNh6vVbZBGLGl4" />
+    <None Remove="oZhMbhjonuI6O7o5OS.Ta8ZIB7cPtIDlT5jA9" />
+    <EmbeddedResource Include="MgJsjLGT3MpsVrZTQq.6nNS9xfjpxWlYMNLyD" LogicalName="MgJsjLGT3MpsVrZTQq.6nNS9xfjpxWlYMNLyD" />
+    <EmbeddedResource Include="XOSvimqvJsMoI7sjJ8.jo2buvWZgMt5UydGn1" LogicalName="XOSvimqvJsMoI7sjJ8.jo2buvWZgMt5UydGn1" />
+    <EmbeddedResource Include="6jGNmYIZyo8gFoeDJn.gSC6mNh6vVbZBGLGl4" LogicalName="6jGNmYIZyo8gFoeDJn.gSC6mNh6vVbZBGLGl4" />
+    <EmbeddedResource Include="oZhMbhjonuI6O7o5OS.Ta8ZIB7cPtIDlT5jA9" LogicalName="oZhMbhjonuI6O7o5OS.Ta8ZIB7cPtIDlT5jA9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ObjectListView">
+      <HintPath>autocom_extracted/Bin/ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>../../../../../../../../../usr/lib/dotnet/shared/Microsoft.NETCore.App/8.0.28/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>../../../../../../../../../usr/lib/dotnet/shared/Microsoft.NETCore.App/8.0.28/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>autocom_extracted/Bin/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>autocom_extracted/Bin/System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0">
+      <HintPath>autocom_extracted/Bin/Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>../../../../../../../../../usr/lib/dotnet/shared/Microsoft.NETCore.App/8.0.28/System.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

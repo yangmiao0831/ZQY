@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS坐标转换与查看</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+            font-weight: bold;
+        }
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #dfe3e8;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .results p {
+            font-size: 16px;
+            color: #555;
+        }
+        .link-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .link-btn:hover {
+            background-color: #007bb5;
+        }
+    </style>
+    <script>
+        // 将经纬度的度分格式转换为十进制
+        function convertToDecimal(degreesMinutes) {
+            const degrees = Math.floor(degreesMinutes / 100);
+            const minutes = degreesMinutes - degrees * 100;
+            return degrees + (minutes / 60);
+        }
+ 
+        // WGS-84 转 GCJ-02 坐标转换算法
+        const PI = Math.PI;
+        const A = 6378245.0; // WGS-84半长轴
+        const EE = 0.00669342162296594323; // 偏心率平方
+ 
+        function out_of_china(lat, lon) {
+            return !(lon >= 72.004 && lon <= 137.8347 && lat >= 0.8293 && lat <= 55.8271);
+        }
+ 
+        function transformLat(x, y) {
+            let ret = -100 + 2 * x + 3 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * Math.sqrt(Math.abs(x));
+            ret += (20 * Math.sin(6 * x * PI) + 20 * Math.sin(2 * x * PI)) * 2 / 3;
+            ret += (20 * Math.sin(y * PI) + 40 * Math.sin(y / 3 * PI)) * 2 / 3;
+            ret += (160 * Math.sin(y / 12 * PI) + 320 * Math.sin(y * PI / 30)) * 2 / 3;
+            return ret;
+        }
+ 
+        function transformLon(x, y) {
+            let ret = 300 + x + 2 * y + 0.1 * x * x + 0.1 * x * y + 0.1 * Math.sqrt(Math.abs(x));
+            ret += (20 * Math.sin(6 * x * PI) + 20 * Math.sin(2 * x * PI)) * 2 / 3;
+            ret += (20 * Math.sin(x * PI) + 40 * Math.sin(x / 3 * PI)) * 2 / 3;
+            ret += (150 * Math.sin(x / 12 * PI) + 300 * Math.sin(x * PI / 30)) * 2 / 3;
+            return ret;
+        }
+ 
+        function wgs84_to_gcj02(lat, lon) {
+            if (out_of_china(lat, lon)) {
+                return { lat: lat, lon: lon };
+            }
+            const dlat = transformLat(lon - 105.0, lat - 35.0);
+            const dlng = transformLon(lon - 105.0, lat - 35.0);
+            const radlat = lat / 180.0 * PI;
+            const magic = Math.sin(radlat);
+            const sqrtmagic = Math.sqrt(1 - EE * magic * magic);
+            const dlatFinal = (dlat * 180.0) / ((A * (1 - EE)) / (sqrtmagic * Math.sqrt(sqrtmagic)) * PI);
+            const dlngFinal = (dlng * 180.0) / (A / sqrtmagic * Math.cos(radlat) * PI);
+            return { lat: lat + dlatFinal, lon: lon + dlngFinal };
+        }
+ 
+        // 坐标转换并展示
+        function convertCoordinates() {
+            const latitudeInput = parseFloat(document.getElementById("latitudeInput").value);
+            const longitudeInput = parseFloat(document.getElementById("longitudeInput").value);
+ 
+            if (isNaN(latitudeInput) || isNaN(longitudeInput)) {
+                alert("请输入有效的经纬度！");
+                return;
+            }
+ 
+            // 将经纬度转换为十进制
+            const latitude = convertToDecimal(latitudeInput);
+            const longitude = convertToDecimal(longitudeInput);
+ 
+            // WGS-84坐标显示
+            document.getElementById('wgsLat').textContent = latitude;
+            document.getElementById('wgsLon').textContent = longitude;
+ 
+            // 转换为GCJ-02坐标
+            const { lat: gcjLat, lon: gcjLon } = wgs84_to_gcj02(latitude, longitude);
+ 
+            // GCJ-02坐标显示
+            document.getElementById('gcjLat').textContent = gcjLat;
+            document.getElementById('gcjLon').textContent = gcjLon;
+ 
+            // 更新高德地图链接
+            document.getElementById('amapLink').href = `https://ditu.amap.com/regeo?lng=${gcjLon}&lat=${gcjLat}&src=uriapi&innersrc=uriapi`;
+        }
+    </script>
+</head>
+<body>
+ 
+<div class="container">
+    <h1>GPS坐标转换与查看</h1>
+ 
+    <div>
+        <label for="latitudeInput">请输入纬度：</label>
+        <input type="text" id="latitudeInput" placeholder="例如：2232.490386">
+    </div>
+ 
+    <div>
+        <label for="longitudeInput">请输入经度：</label>
+        <input type="text" id="longitudeInput" placeholder="例如：11404.688746">
+    </div>
+ 
+    <button onclick="convertCoordinates()">转换坐标</button>
+ 
+    <div class="results">
+        <h3>WGS-84坐标：</h3>
+        <p>纬度: <span id="wgsLat">等待数据...</span></p>
+        <p>经度: <span id="wgsLon">等待数据...</span></p>
+ 
+        <h3>转换后的GCJ-02坐标：</h3>
+        <p>纬度: <span id="gcjLat">等待数据...</span></p>
+        <p>经度: <span id="gcjLon">等待数据...</span></p>
+ 
+        <a class="link-btn" id="amapLink" target="_blank">查看高德地图</a>
+    </div>
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,35 @@
+namespace LibCoord;
+
+public enum PCTELCellEditorType
+{
+	cetFrequencyGroupNR5G,
+	cetFrequencyGroupLte,
+	cetContinueFrequencyNR5G,
+	cetContinueFrequencyLte,
+	cetDivisionFrequencyNR5G,
+	cetDivisionFrequencyLte,
+	cetUserListNR5G,
+	cetUserListLte,
+	cetFrequencyGroupNB,
+	cetContinueFrequencyNB,
+	cetDivisionFrequencyNB,
+	cetUserListNB,
+	cetFrequencyGroupGSM,
+	cetContinueFrequencyGSM,
+	cetDivisionFrequencyGSM,
+	cetUserListGSM,
+	cetFrequencyGroupWCDMA,
+	cetContinueFrequencyWCDMA,
+	cetDivisionFrequencyWCDMA,
+	cetUserListWCDMA,
+	cetFrequencyGroupCDMA,
+	cetContinueFrequencyCDMA,
+	cetDivisionFrequencyCDMA,
+	cetUserListCDMA,
+	cetFrequencyGroupWiFi,
+	cetContinueFrequencyWiFi,
+	cetDivisionFrequencyWiFi,
+	cetUserListWiFi,
+	cetDivisionFrequencyAuto,
+	cetUserListAuto
+}

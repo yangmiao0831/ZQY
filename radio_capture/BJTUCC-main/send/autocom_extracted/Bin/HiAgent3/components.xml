@@ -1,0 +1,14 @@
+<Packages>
+    <ApplicationName>AgentSvr</ApplicationName>
+    <ApplicationVersion>1.0.0</ApplicationVersion>
+    <Package>
+        <Name>com.diag.tools.agent</Name>
+        <Title>HiAP</Title>
+        <Description>The HiAP component.</Description>
+        <Version>5.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2024-12-30</InstallDate>
+        <Size>68546643</Size>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+</Packages>

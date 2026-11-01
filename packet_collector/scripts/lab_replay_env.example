@@ -1,0 +1,9 @@
+PI_IP=192.168.31.102
+LAB_PC_IP=192.168.31.79
+IFACE=wlan0
+TRACE=captures/session_xxx/replay_trace.json
+PORT=9000
+PROTOCOL=tcp
+MAX_FLOWS=3
+ROLE=download
+CAPTURE_DURATION=60

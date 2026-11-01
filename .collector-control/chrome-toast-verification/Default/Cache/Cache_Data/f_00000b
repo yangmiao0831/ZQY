@@ -1,0 +1,677 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/GpsTrackerView.tsx");import.meta.env = {"BASE_URL": "/", "DEV": true, "MODE": "development", "PROD": false, "SSR": false};import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=6518091a"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/node_modules/.vite/deps/react.js?v=6518091a"; const React = __vite__cjsImport1_react.__esModule ? __vite__cjsImport1_react.default : __vite__cjsImport1_react; const useEffect = __vite__cjsImport1_react["useEffect"]; const useRef = __vite__cjsImport1_react["useRef"]; const useState = __vite__cjsImport1_react["useState"];
+import { Map, Settings2, X, MousePointer2 } from "/node_modules/.vite/deps/lucide-react.js?v=6518091a";
+import { cn } from "/src/lib/utils.ts";
+export function GpsTrackerView({
+  data: localData,
+  hasQuery,
+  isActive
+}) {
+  _s();
+  const mapContainerRef = useRef(null);
+  const mapInstanceRef = useRef(null);
+  const dotsRef = useRef([]);
+  const fittedDataRef = useRef(null);
+  const [selectedPoint, setSelectedPoint] = useState(null);
+  useEffect(() => {
+    setSelectedPoint(null);
+  }, [localData]);
+  const [showSettings, setShowSettings] = useState(false);
+  const [activeMetric, setActiveMetric] = useState("avg_rtt_ms");
+  const [thresholds, setThresholds] = useState({
+    avg_rtt_ms: { good: 10, warning: 50 },
+    jitter_ms: { good: 5, warning: 20 },
+    throughput_bps: { good: 5e6, warning: 1e6 },
+    loss_rate: { good: 0, warning: 0.05 }
+  });
+  const getDotColor = (point, metric, thresh) => {
+    const value = point[metric];
+    if (value === null || value === void 0) return "#9ca3af";
+    const t = thresh[metric];
+    if (metric === "throughput_bps") {
+      if (value >= t.good) return "#22c55e";
+      if (value >= t.warning) return "#eab308";
+      return "#ef4444";
+    } else {
+      if (value <= t.good) return "#22c55e";
+      if (value <= t.warning) return "#eab308";
+      return "#ef4444";
+    }
+  };
+  const [mapInitialized, setMapInitialized] = useState(false);
+  const [mapLoadError, setMapLoadError] = useState(false);
+  useEffect(() => {
+    let isMounted = true;
+    const initMap = () => {
+      if (!isMounted) return;
+      if (!window.AMap || !mapContainerRef.current) {
+        setMapLoadError(true);
+        return;
+      }
+      try {
+        const center = localData.length > 0 ? [localData[0].longitude, localData[0].latitude] : [116.397428, 39.90923];
+        const map = new window.AMap.Map(mapContainerRef.current, {
+          zoom: 16,
+          center,
+          mapStyle: "amap://styles/dark"
+        });
+        mapInstanceRef.current = map;
+        setMapInitialized(true);
+      } catch (err) {
+        console.warn("Failed to instantiate AMap:", err);
+        setMapLoadError(true);
+      }
+    };
+    if (window.AMap) {
+      initMap();
+    } else {
+      window._AMapSecurityConfig = {
+        securityJsCode: "7dc4def5e6ae5f116c12fef86176bc75"
+      };
+      const existingScript = document.getElementById("amap-script");
+      if (!existingScript) {
+        const script = document.createElement("script");
+        script.id = "amap-script";
+        const amapKey = import.meta.env.VITE_AMAP_KEY || "2b14a767057d5161de944161a6065b9e";
+        script.src = `https://webapi.amap.com/maps?v=2.0&key=${amapKey}&plugin=AMap.Marker,AMap.MoveAnimation`;
+        script.async = true;
+        script.onload = () => {
+          setTimeout(initMap, 50);
+        };
+        script.onerror = () => {
+          console.warn("AMap CDN script load failed. Using built-in vector plot fallback.");
+          if (isMounted) setMapLoadError(true);
+        };
+        document.head.appendChild(script);
+      } else {
+        const timer = setTimeout(initMap, 200);
+        return () => clearTimeout(timer);
+      }
+    }
+    return () => {
+      isMounted = false;
+      if (mapInstanceRef.current && typeof mapInstanceRef.current.destroy === "function") {
+        try {
+          mapInstanceRef.current.destroy();
+        } catch {
+        }
+      }
+    };
+  }, []);
+  useEffect(() => {
+    if (!mapInitialized || !mapInstanceRef.current || !isActive) return;
+    const map = mapInstanceRef.current;
+    map.resize?.();
+    if (dotsRef.current.length > 0) {
+      mapInstanceRef.current.remove(dotsRef.current);
+      dotsRef.current = [];
+    }
+    localData.forEach((point) => {
+      const color = getDotColor(point, activeMetric, thresholds);
+      const dot = new window.AMap.CircleMarker({
+        center: [point.longitude, point.latitude],
+        radius: 4,
+        fillColor: color,
+        fillOpacity: 0.8,
+        strokeColor: "#ffffff",
+        strokeWeight: 1,
+        zIndex: 10,
+        cursor: "pointer",
+        extData: point
+      });
+      dot.on("click", (e) => {
+        setSelectedPoint(e.target.getExtData());
+        mapInstanceRef.current.panTo([point.longitude, point.latitude]);
+      });
+      dot.setMap(mapInstanceRef.current);
+      dotsRef.current.push(dot);
+    });
+    const timer = setTimeout(() => {
+      if (localData.length > 0 && fittedDataRef.current !== localData) {
+        map.setFitView();
+        fittedDataRef.current = localData;
+      }
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [localData, activeMetric, thresholds, mapInitialized, isActive]);
+  const currentMetricValue = selectedPoint?.[activeMetric];
+  const coordsBounds = React.useMemo(() => {
+    if (localData.length === 0) return { minLat: 39.9, maxLat: 40, minLon: 116.3, maxLon: 116.4 };
+    let minLat = Infinity, maxLat = -Infinity, minLon = Infinity, maxLon = -Infinity;
+    localData.forEach((d) => {
+      if (d.latitude < minLat) minLat = d.latitude;
+      if (d.latitude > maxLat) maxLat = d.latitude;
+      if (d.longitude < minLon) minLon = d.longitude;
+      if (d.longitude > maxLon) maxLon = d.longitude;
+    });
+    const padLat = Math.max((maxLat - minLat) * 0.1, 1e-3);
+    const padLon = Math.max((maxLon - minLon) * 0.1, 1e-3);
+    return { minLat: minLat - padLat, maxLat: maxLat + padLat, minLon: minLon - padLon, maxLon: maxLon + padLon };
+  }, [localData]);
+  return /* @__PURE__ */ jsxDEV("div", { className: "h-full flex flex-col relative bg-black rounded-xl overflow-hidden shadow-inner border border-white/5", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "absolute top-4 left-4 z-10 flex flex-col gap-4 w-72", children: /* @__PURE__ */ jsxDEV("div", { className: "bg-black/60 backdrop-blur border border-white/10 p-4 rounded-xl shadow-lg transition-all", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between mb-4", children: [
+        /* @__PURE__ */ jsxDEV("h3", { className: "text-sm font-bold flex items-center gap-2 text-white uppercase tracking-wider", children: [
+          /* @__PURE__ */ jsxDEV(Map, { className: "w-4 h-4 text-diag-accent" }, void 0, false, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 185,
+            columnNumber: 15
+          }, this),
+          " 定位数据分析"
+        ] }, void 0, true, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 184,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "text-xs text-gray-400 font-mono", children: [
+          "共 ",
+          localData.length,
+          " 个点位"
+        ] }, void 0, true, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 187,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+        lineNumber: 183,
+        columnNumber: 11
+      }, this),
+      localData.length === 0 && /* @__PURE__ */ jsxDEV("p", { className: "text-xs text-gray-400 mb-3", children: hasQuery ? "所选 CSV 和时间范围内没有有效定位点，请调整数据选择。" : "请先在数据可视化中选择 CSV 和时间范围，点击“确认并分析”。" }, void 0, false, {
+        fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+        lineNumber: 190,
+        columnNumber: 11
+      }, this),
+      selectedPoint ? /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-2 gap-4 mb-2", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "text-[10px] text-gray-400 font-bold uppercase mb-1", children: "时间戳" }, void 0, false, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 198,
+            columnNumber: 17
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "text-sm font-mono text-diag-accent truncate", title: selectedPoint.timestamp, children: selectedPoint.timestamp }, void 0, false, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 199,
+            columnNumber: 17
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 197,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "text-[10px] text-gray-400 font-bold uppercase mb-1", children: "索引" }, void 0, false, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 202,
+            columnNumber: 17
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "text-sm font-mono text-white", children: [
+            "#",
+            selectedPoint.index
+          ] }, void 0, true, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 203,
+            columnNumber: 17
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 201,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "text-[10px] text-gray-400 font-bold uppercase mb-1", children: "经度" }, void 0, false, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 208,
+            columnNumber: 17
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "text-xs font-mono text-white", children: selectedPoint.longitude.toFixed(6) }, void 0, false, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 209,
+            columnNumber: 17
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 207,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "text-[10px] text-gray-400 font-bold uppercase mb-1", children: "纬度" }, void 0, false, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 212,
+            columnNumber: 17
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "text-xs font-mono text-white", children: selectedPoint.latitude.toFixed(6) }, void 0, false, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 213,
+            columnNumber: 17
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 211,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "col-span-2 bg-white/5 p-2 rounded border border-white/5 mt-2", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "text-[10px] text-gray-400 font-bold uppercase mb-1 flex items-center justify-between", children: [
+            /* @__PURE__ */ jsxDEV("span", { children: [
+              "检测值 (",
+              activeMetric,
+              ")"
+            ] }, void 0, true, {
+              fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+              lineNumber: 217,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "div",
+              {
+                className: "w-2 h-2 rounded-full shadow-[0_0_8px_rgba(255,255,255,0.5)]",
+                style: { backgroundColor: getDotColor(selectedPoint, activeMetric, thresholds) }
+              },
+              void 0,
+              false,
+              {
+                fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+                lineNumber: 218,
+                columnNumber: 19
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 216,
+            columnNumber: 17
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "text-xl font-mono font-bold text-white flex items-end gap-2", children: [
+            currentMetricValue !== null && currentMetricValue !== void 0 ? Number(currentMetricValue).toLocaleString() : "--",
+            /* @__PURE__ */ jsxDEV("span", { className: "text-[10px] text-gray-500 font-normal pb-1 tracking-widest uppercase", children: activeMetric.split("_")[1] === "ms" ? "ms" : activeMetric.split("_")[1] === "bps" ? "bps" : "%" }, void 0, false, {
+              fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+              lineNumber: 227,
+              columnNumber: 19
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 223,
+            columnNumber: 17
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 215,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+        lineNumber: 196,
+        columnNumber: 11
+      }, this) : /* @__PURE__ */ jsxDEV("div", { className: "h-40 flex flex-col items-center justify-center text-gray-500 gap-3 border border-dashed border-white/10 rounded-lg bg-white/5", children: [
+        /* @__PURE__ */ jsxDEV(MousePointer2, { className: "w-6 h-6 opacity-50" }, void 0, false, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 235,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { className: "text-xs", children: "点击地图上的标记点查看详情" }, void 0, false, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 236,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+        lineNumber: 234,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+      lineNumber: 182,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+      lineNumber: 181,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(
+      "button",
+      {
+        onClick: () => setShowSettings(!showSettings),
+        className: "absolute top-4 right-4 z-20 bg-black/60 backdrop-blur border border-white/10 p-2 rounded-lg shadow-lg text-gray-400 hover:text-white transition-colors",
+        children: /* @__PURE__ */ jsxDEV(Settings2, { className: "w-5 h-5" }, void 0, false, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 247,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+        lineNumber: 243,
+        columnNumber: 7
+      },
+      this
+    ),
+    showSettings && /* @__PURE__ */ jsxDEV("div", { className: "absolute top-16 right-4 z-20 bg-black/80 backdrop-blur border border-white/10 p-5 rounded-xl shadow-xl w-80 text-gray-200", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "flex justify-between items-center mb-4", children: [
+        /* @__PURE__ */ jsxDEV("h3", { className: "text-sm font-bold uppercase tracking-wider text-white", children: "颜色标记设置" }, void 0, false, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 254,
+          columnNumber: 16
+        }, this),
+        /* @__PURE__ */ jsxDEV("button", { onClick: () => setShowSettings(false), className: "text-gray-400 hover:text-white", children: /* @__PURE__ */ jsxDEV(X, { className: "w-4 h-4" }, void 0, false, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 255,
+          columnNumber: 106
+        }, this) }, void 0, false, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 255,
+          columnNumber: 16
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+        lineNumber: 253,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "space-y-4", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { className: "text-xs text-gray-400 mb-2 block", children: "数据依据 (Metric)" }, void 0, false, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 260,
+            columnNumber: 18
+          }, this),
+          /* @__PURE__ */ jsxDEV(
+            "select",
+            {
+              value: activeMetric,
+              onChange: (e) => setActiveMetric(e.target.value),
+              className: "w-full bg-white/10 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-diag-accent appearance-none cursor-pointer",
+              children: [
+                /* @__PURE__ */ jsxDEV("option", { value: "avg_rtt_ms", className: "bg-gray-900", children: "平均延迟 (RTT)" }, void 0, false, {
+                  fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+                  lineNumber: 266,
+                  columnNumber: 20
+                }, this),
+                /* @__PURE__ */ jsxDEV("option", { value: "jitter_ms", className: "bg-gray-900", children: "抖动 (Jitter)" }, void 0, false, {
+                  fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+                  lineNumber: 267,
+                  columnNumber: 20
+                }, this),
+                /* @__PURE__ */ jsxDEV("option", { value: "throughput_bps", className: "bg-gray-900", children: "吞吐量 (Throughput)" }, void 0, false, {
+                  fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+                  lineNumber: 268,
+                  columnNumber: 20
+                }, this),
+                /* @__PURE__ */ jsxDEV("option", { value: "loss_rate", className: "bg-gray-900", children: "丢包率 (Loss Rate)" }, void 0, false, {
+                  fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+                  lineNumber: 269,
+                  columnNumber: 20
+                }, this)
+              ]
+            },
+            void 0,
+            true,
+            {
+              fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+              lineNumber: 261,
+              columnNumber: 18
+            },
+            this
+          )
+        ] }, void 0, true, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 259,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "p-3 bg-white/5 rounded-lg border border-white/5 space-y-3", children: [
+          /* @__PURE__ */ jsxDEV("h4", { className: "text-xs font-bold text-gray-300", children: "数据范围阈值" }, void 0, false, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 274,
+            columnNumber: 18
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "w-3 h-3 rounded-full bg-green-500 shrink-0 shadow-[0_0_8px_rgba(34,197,94,0.6)]" }, void 0, false, {
+              fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+              lineNumber: 277,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { className: "text-xs flex-1 text-gray-400 font-mono", children: [
+              "良好 ",
+              activeMetric === "throughput_bps" ? ">=" : "<="
+            ] }, void 0, true, {
+              fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+              lineNumber: 278,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "number",
+                value: thresholds[activeMetric].good,
+                onChange: (e) => setThresholds((prev) => ({ ...prev, [activeMetric]: { ...prev[activeMetric], good: Number(e.target.value) } })),
+                className: "w-24 bg-black/50 border border-white/10 rounded px-2 py-1 text-xs text-white text-right focus:outline-none focus:border-diag-accent"
+              },
+              void 0,
+              false,
+              {
+                fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+                lineNumber: 279,
+                columnNumber: 21
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 276,
+            columnNumber: 18
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "w-3 h-3 rounded-full bg-yellow-500 shrink-0 shadow-[0_0_8px_rgba(234,179,8,0.6)]" }, void 0, false, {
+              fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+              lineNumber: 288,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { className: "text-xs flex-1 text-gray-400 font-mono", children: "警告阈值" }, void 0, false, {
+              fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+              lineNumber: 289,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "number",
+                value: thresholds[activeMetric].warning,
+                onChange: (e) => setThresholds((prev) => ({ ...prev, [activeMetric]: { ...prev[activeMetric], warning: Number(e.target.value) } })),
+                className: "w-24 bg-black/50 border border-white/10 rounded px-2 py-1 text-xs text-white text-right focus:outline-none focus:border-diag-accent"
+              },
+              void 0,
+              false,
+              {
+                fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+                lineNumber: 290,
+                columnNumber: 21
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 287,
+            columnNumber: 18
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "w-3 h-3 rounded-full bg-red-500 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.6)]" }, void 0, false, {
+              fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+              lineNumber: 299,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { className: "text-xs flex-1 text-gray-400 font-mono", children: [
+              "较差 ",
+              activeMetric === "throughput_bps" ? "<" : ">",
+              " 警告"
+            ] }, void 0, true, {
+              fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+              lineNumber: 300,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "w-24 text-right px-2 py-1 text-xs text-gray-600 font-mono", children: "自动计算" }, void 0, false, {
+              fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+              lineNumber: 301,
+              columnNumber: 21
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 298,
+            columnNumber: 18
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 273,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+        lineNumber: 258,
+        columnNumber: 13
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+      lineNumber: 252,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { ref: mapContainerRef, className: cn("w-full h-full", mapLoadError ? "hidden" : "block") }, void 0, false, {
+      fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+      lineNumber: 310,
+      columnNumber: 7
+    }, this),
+    mapLoadError && /* @__PURE__ */ jsxDEV("div", { className: "w-full h-full flex flex-col items-center justify-center p-8 bg-[#090d16] relative select-none", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "absolute top-4 right-4 z-10 px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-xs rounded-full flex items-center gap-1.5 font-mono", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "w-2 h-2 rounded-full bg-yellow-400 animate-pulse" }, void 0, false, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 315,
+          columnNumber: 13
+        }, this),
+        "离线高精轨迹视图 (高德地图外部服务不可用时自动启用)"
+      ] }, void 0, true, {
+        fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+        lineNumber: 314,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("svg", { className: "w-full h-full", viewBox: "0 0 1000 600", preserveAspectRatio: "xMidYMid meet", children: [
+        /* @__PURE__ */ jsxDEV("defs", { children: /* @__PURE__ */ jsxDEV("pattern", { id: "grid", width: "40", height: "40", patternUnits: "userSpaceOnUse", children: /* @__PURE__ */ jsxDEV("path", { d: "M 40 0 L 0 0 0 40", fill: "none", stroke: "rgba(255,255,255,0.05)", strokeWidth: "1" }, void 0, false, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 322,
+          columnNumber: 17
+        }, this) }, void 0, false, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 321,
+          columnNumber: 15
+        }, this) }, void 0, false, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 320,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV("rect", { width: "1000", height: "600", fill: "url(#grid)" }, void 0, false, {
+          fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+          lineNumber: 325,
+          columnNumber: 13
+        }, this),
+        localData.length > 1 && /* @__PURE__ */ jsxDEV(
+          "polyline",
+          {
+            fill: "none",
+            stroke: "rgba(59,130,246,0.3)",
+            strokeWidth: "2",
+            strokeDasharray: "4 2",
+            points: localData.map((p) => {
+              const x = 50 + (p.longitude - coordsBounds.minLon) / (coordsBounds.maxLon - coordsBounds.minLon || 1) * 900;
+              const y = 550 - (p.latitude - coordsBounds.minLat) / (coordsBounds.maxLat - coordsBounds.minLat || 1) * 500;
+              return `${x},${y}`;
+            }).join(" ")
+          },
+          void 0,
+          false,
+          {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 329,
+            columnNumber: 11
+          },
+          this
+        ),
+        localData.map((point) => {
+          const x = 50 + (point.longitude - coordsBounds.minLon) / (coordsBounds.maxLon - coordsBounds.minLon || 1) * 900;
+          const y = 550 - (point.latitude - coordsBounds.minLat) / (coordsBounds.maxLat - coordsBounds.minLat || 1) * 500;
+          const color = getDotColor(point, activeMetric, thresholds);
+          const isSelected = selectedPoint?.index === point.index;
+          return /* @__PURE__ */ jsxDEV("g", { onClick: () => setSelectedPoint(point), className: "cursor-pointer group", children: [
+            isSelected && /* @__PURE__ */ jsxDEV("circle", { cx: x, cy: y, r: 10, fill: "none", stroke: "#60a5fa", strokeWidth: 2, className: "animate-ping", opacity: 0.7 }, void 0, false, {
+              fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+              lineNumber: 352,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "circle",
+              {
+                cx: x,
+                cy: y,
+                r: isSelected ? 6 : 4,
+                fill: color,
+                stroke: "#ffffff",
+                strokeWidth: isSelected ? 2 : 1,
+                className: "transition-all hover:r-6"
+              },
+              void 0,
+              false,
+              {
+                fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+                lineNumber: 354,
+                columnNumber: 19
+              },
+              this
+            )
+          ] }, point.index, true, {
+            fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+            lineNumber: 350,
+            columnNumber: 15
+          }, this);
+        })
+      ] }, void 0, true, {
+        fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+        lineNumber: 319,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+      lineNumber: 313,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx",
+    lineNumber: 179,
+    columnNumber: 5
+  }, this);
+}
+_s(GpsTrackerView, "Us3HIKN29PS2/JoBTeUy33jttWw=");
+_c = GpsTrackerView;
+var _c;
+$RefreshReg$(_c, "GpsTrackerView");
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) {
+  return RefreshRuntime.register(type, "D:/ZQY/iov-data-collector-(ue-stack)/frontend/src/components/GpsTrackerView.tsx " + id);
+}
+function $RefreshSig$() {
+  return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUNKLElBQUlDO0FBQUFBLGdCQUNKLEdBQUdFLGFBQWEsSUFBSTtBQUFBLGdCQUNwQixNQUFNNUM7QUFBQUEsZ0JBQ04sUUFBTztBQUFBLGdCQUNQLGFBQWE0QyxhQUFhLElBQUk7QUFBQSxnQkFDOUIsV0FBVTtBQUFBO0FBQUEsY0FQWjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFPc0M7QUFBQSxlQVhoQzlGLE1BQU1tRixPQUFkO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBYUE7QUFBQSxRQUVKLENBQUM7QUFBQSxXQTlDSDtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBK0NBO0FBQUEsU0FyREY7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQXNEQTtBQUFBLE9BNUxKO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0E4TEE7QUFFSjtBQUFDdkcsR0EzV2VMLGdCQUFjO0FBQUEsS0FBZEE7QUFBYyxJQUFBd0g7QUFBQSxhQUFBQSxJQUFBIiwibmFtZXMiOlsiUmVhY3QiLCJ1c2VFZmZlY3QiLCJ1c2VSZWYiLCJ1c2VTdGF0ZSIsIk1hcCIsIlNldHRpbmdzMiIsIlgiLCJNb3VzZVBvaW50ZXIyIiwiY24iLCJHcHNUcmFja2VyVmlldyIsImRhdGEiLCJsb2NhbERhdGEiLCJoYXNRdWVyeSIsImlzQWN0aXZlIiwiX3MiLCJtYXBDb250YWluZXJSZWYiLCJtYXBJbnN0YW5jZVJlZiIsImRvdHNSZWYiLCJmaXR0ZWREYXRhUmVmIiwic2VsZWN0ZWRQb2ludCIsInNldFNlbGVjdGVkUG9pbnQiLCJzaG93U2V0dGluZ3MiLCJzZXRTaG93U2V0dGluZ3MiLCJhY3RpdmVNZXRyaWMiLCJzZXRBY3RpdmVNZXRyaWMiLCJ0aHJlc2hvbGRzIiwic2V0VGhyZXNob2xkcyIsImF2Z19ydHRfbXMiLCJnb29kIiwid2FybmluZyIsImppdHRlcl9tcyIsInRocm91Z2hwdXRfYnBzIiwibG9zc19yYXRlIiwiZ2V0RG90Q29sb3IiLCJwb2ludCIsIm1ldHJpYyIsInRocmVzaCIsInZhbHVlIiwidW5kZWZpbmVkIiwidCIsIm1hcEluaXRpYWxpemVkIiwic2V0TWFwSW5pdGlhbGl6ZWQiLCJtYXBMb2FkRXJyb3IiLCJzZXRNYXBMb2FkRXJyb3IiLCJpc01vdW50ZWQiLCJpbml0TWFwIiwid2luZG93IiwiQU1hcCIsImN1cnJlbnQiLCJjZW50ZXIiLCJsZW5ndGgiLCJsb25naXR1ZGUiLCJsYXRpdHVkZSIsIm1hcCIsInpvb20iLCJtYXBTdHlsZSIsImVyciIsImNvbnNvbGUiLCJ3YXJuIiwiX0FNYXBTZWN1cml0eUNvbmZpZyIsInNlY3VyaXR5SnNDb2RlIiwiZXhpc3RpbmdTY3JpcHQiLCJkb2N1bWVudCIsImdldEVsZW1lbnRCeUlkIiwic2NyaXB0IiwiY3JlYXRlRWxlbWVudCIsImlkIiwiYW1hcEtleSIsImltcG9ydCIsImVudiIsIlZJVEVfQU1BUF9LRVkiLCJzcmMiLCJhc3luYyIsIm9ubG9hZCIsInNldFRpbWVvdXQiLCJvbmVycm9yIiwiaGVhZCIsImFwcGVuZENoaWxkIiwidGltZXIiLCJjbGVhclRpbWVvdXQiLCJkZXN0cm95IiwicmVzaXplIiwicmVtb3ZlIiwiZm9yRWFjaCIsImNvbG9yIiwiZG90IiwiQ2lyY2xlTWFya2VyIiwicmFkaXVzIiwiZmlsbENvbG9yIiwiZmlsbE9wYWNpdHkiLCJzdHJva2VDb2xvciIsInN0cm9rZVdlaWdodCIsInpJbmRleCIsImN1cnNvciIsImV4dERhdGEiLCJvbiIsImUiLCJ0YXJnZXQiLCJnZXRFeHREYXRhIiwicGFuVG8iLCJzZXRNYXAiLCJwdXNoIiwic2V0Rml0VmlldyIsImN1cnJlbnRNZXRyaWNWYWx1ZSIsImNvb3Jkc0JvdW5kcyIsInVzZU1lbW8iLCJtaW5MYXQiLCJtYXhMYXQiLCJtaW5Mb24iLCJtYXhMb24iLCJJbmZpbml0eSIsImQiLCJwYWRMYXQiLCJNYXRoIiwibWF4IiwicGFkTG9uIiwidGltZXN0YW1wIiwiaW5kZXgiLCJ0b0ZpeGVkIiwiYmFja2dyb3VuZENvbG9yIiwiTnVtYmVyIiwidG9Mb2NhbGVTdHJpbmciLCJzcGxpdCIsInByZXYiLCJwIiwieCIsInkiLCJqb2luIiwiaXNTZWxlY3RlZCIsIl9jIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkdwc1RyYWNrZXJWaWV3LnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlRWZmZWN0LCB1c2VSZWYsIHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHR5cGUgeyBHcHNEYXRhUG9pbnQgfSBmcm9tICcuLi9kYXRhL2dwc0RhdGEnO1xuaW1wb3J0IHsgTWFwLCBTZXR0aW5nczIsIFgsIE1vdXNlUG9pbnRlcjIgfSBmcm9tICdsdWNpZGUtcmVhY3QnO1xuaW1wb3J0IHsgY24gfSBmcm9tICcuLi9saWIvdXRpbHMnO1xuXG50eXBlIE1ldHJpY1R5cGUgPSAnYXZnX3J0dF9tcycgfCAnaml0dGVyX21zJyB8ICd0aHJvdWdocHV0X2JwcycgfCAnbG9zc19yYXRlJztcblxuZXhwb3J0IGZ1bmN0aW9uIEdwc1RyYWNrZXJWaWV3KHsgZGF0YTogbG9jYWxEYXRhLCBoYXNRdWVyeSwgaXNBY3RpdmUgfToge1xuICBkYXRhOiBHcHNEYXRhUG9pbnRbXTtcbiAgaGFzUXVlcnk6IGJvb2xlYW47XG4gIGlzQWN0aXZlOiBib29sZWFuO1xufSkge1xuICBjb25zdCBtYXBDb250YWluZXJSZWYgPSB1c2VSZWY8SFRNTERpdkVsZW1lbnQ+KG51bGwpO1xuICBjb25zdCBtYXBJbnN0YW5jZVJlZiA9IHVzZVJlZjxhbnk+KG51bGwpO1xuICBjb25zdCBkb3RzUmVmID0gdXNlUmVmPGFueVtdPihbXSk7XG4gIGNvbnN0IGZpdHRlZERhdGFSZWYgPSB1c2VSZWY8R3BzRGF0YVBvaW50W10gfCBudWxsPihudWxsKTtcbiAgXG4gIGNvbnN0IFtzZWxlY3RlZFBvaW50LCBzZXRTZWxlY3RlZFBvaW50XSA9IHVzZVN0YXRlPEdwc0RhdGFQb2ludCB8IG51bGw+KG51bGwpO1xuICB1c2VFZmZlY3QoKCkgPT4geyBzZXRTZWxlY3RlZFBvaW50KG51bGwpOyB9LCBbbG9jYWxEYXRhXSk7XG5cbiAgLy8gU2V0dGluZ3MgU3RhdGVcbiAgY29uc3QgW3Nob3dTZXR0aW5ncywgc2V0U2hvd1NldHRpbmdzXSA9IHVzZVN0YXRlKGZhbHNlKTtcbiAgY29uc3QgW2FjdGl2ZU1ldHJpYywgc2V0QWN0aXZlTWV0cmljXSA9IHVzZVN0YXRlPE1ldHJpY1R5cGU+KCdhdmdfcnR0X21zJyk7XG4gIGNvbnN0IFt0aHJlc2hvbGRzLCBzZXRUaHJlc2hvbGRzXSA9IHVzZVN0YXRlKHtcbiAgICBhdmdfcnR0X21zOiB7IGdvb2Q6IDEwLCB3YXJuaW5nOiA1MCB9LFxuICAgIGppdHRlcl9tczogeyBnb29kOiA1LCB3YXJuaW5nOiAyMCB9LFxuICAgIHRocm91Z2hwdXRfYnBzOiB7IGdvb2Q6IDUwMDAwMDAsIHdhcm5pbmc6IDEwMDAwMDAgfSxcbiAgICBsb3NzX3JhdGU6IHsgZ29vZDogMCwgd2FybmluZzogMC4wNSB9LFxuICB9KTtcblxuICBjb25zdCBnZXREb3RDb2xvciA9IChwb2ludDogR3BzRGF0YVBvaW50LCBtZXRyaWM6IE1ldHJpY1R5cGUsIHRocmVzaDogdHlwZW9mIHRocmVzaG9sZHMpID0+IHtcbiAgICBjb25zdCB2YWx1ZSA9IHBvaW50W21ldHJpY107XG4gICAgaWYgKHZhbHVlID09PSBudWxsIHx8IHZhbHVlID09PSB1bmRlZmluZWQpIHJldHVybiAnIzljYTNhZic7IC8vIEdyYXkgZm9yIG51bGwvaW52YWxpZFxuXG4gICAgY29uc3QgdCA9IHRocmVzaFttZXRyaWNdO1xuICAgIFxuICAgIGlmIChtZXRyaWMgPT09ICd0aHJvdWdocHV0X2JwcycpIHtcbiAgICAgIGlmICh2YWx1ZSA+PSB0Lmdvb2QpIHJldHVybiAnIzIyYzU1ZSc7IC8vIEdyZWVuXG4gICAgICBpZiAodmFsdWUgPj0gdC53YXJuaW5nKSByZXR1cm4gJyNlYWIzMDgnOyAvLyBZZWxsb3dcbiAgICAgIHJldHVybiAnI2VmNDQ0NCc7IC8vIFJlZFxuICAgIH0gZWxzZSB7XG4gICAgICBpZiAodmFsdWUgPD0gdC5nb29kKSByZXR1cm4gJyMyMmM1NWUnOyAvLyBHcmVlblxuICAgICAgaWYgKHZhbHVlIDw9IHQud2FybmluZykgcmV0dXJuICcjZWFiMzA4JzsgLy8gWWVsbG93XG4gICAgICByZXR1cm4gJyNlZjQ0NDQnOyAvLyBSZWRcbiAgICB9XG4gIH07XG5cbiAgY29uc3QgW21hcEluaXRpYWxpemVkLCBzZXRNYXBJbml0aWFsaXplZF0gPSB1c2VTdGF0ZShmYWxzZSk7XG4gIGNvbnN0IFttYXBMb2FkRXJyb3IsIHNldE1hcExvYWRFcnJvcl0gPSB1c2VTdGF0ZShmYWxzZSk7XG5cbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBsZXQgaXNNb3VudGVkID0gdHJ1ZTtcblxuICAgIGNvbnN0IGluaXRNYXAgPSAoKSA9PiB7XG4gICAgICBpZiAoIWlzTW91bnRlZCkgcmV0dXJuO1xuICAgICAgaWYgKCF3aW5kb3cuQU1hcCB8fCAhbWFwQ29udGFpbmVyUmVmLmN1cnJlbnQpIHtcbiAgICAgICAgc2V0TWFwTG9hZEVycm9yKHRydWUpO1xuICAgICAgICByZXR1cm47XG4gICAgICB9XG4gICAgICBcbiAgICAgIHRyeSB7XG4gICAgICAgIGNvbnN0IGNlbnRlciA9IGxvY2FsRGF0YS5sZW5ndGggPiAwID8gW2xvY2FsRGF0YVswXS5sb25naXR1ZGUsIGxvY2FsRGF0YVswXS5sYXRpdHVkZV0gOiBbMTE2LjM5NzQyOCwgMzkuOTA5MjNdO1xuICAgICAgICBcbiAgICAgICAgY29uc3QgbWFwID0gbmV3IHdpbmRvdy5BTWFwLk1hcChtYXBDb250YWluZXJSZWYuY3VycmVudCwge1xuICAgICAgICAgIHpvb206IDE2LFxuICAgICAgICAgIGNlbnRlcjogY2VudGVyLFxuICAgICAgICAgIG1hcFN0eWxlOiBcImFtYXA6Ly9zdHlsZXMvZGFya1wiLFxuICAgICAgICB9KTtcbiAgICAgICAgbWFwSW5zdGFuY2VSZWYuY3VycmVudCA9IG1hcDtcbiAgICAgICAgc2V0TWFwSW5pdGlhbGl6ZWQodHJ1ZSk7XG4gICAgICB9IGNhdGNoIChlcnIpIHtcbiAgICAgICAgY29uc29sZS53YXJuKFwiRmFpbGVkIHRvIGluc3RhbnRpYXRlIEFNYXA6XCIsIGVycik7XG4gICAgICAgIHNldE1hcExvYWRFcnJvcih0cnVlKTtcbiAgICAgIH1cbiAgICB9O1xuXG4gICAgaWYgKHdpbmRvdy5BTWFwKSB7XG4gICAgICBpbml0TWFwKCk7XG4gICAgfSBlbHNlIHtcbiAgICAgIHdpbmRvdy5fQU1hcFNlY3VyaXR5Q29uZmlnID0ge1xuICAgICAgICBzZWN1cml0eUpzQ29kZTogXCI3ZGM0ZGVmNWU2YWU1ZjExNmMxMmZlZjg2MTc2YmM3NVwiLFxuICAgICAgfTtcbiAgICAgIGNvbnN0IGV4aXN0aW5nU2NyaXB0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FtYXAtc2NyaXB0Jyk7XG4gICAgICBpZiAoIWV4aXN0aW5nU2NyaXB0KSB7XG4gICAgICAgIGNvbnN0IHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpO1xuICAgICAgICBzY3JpcHQuaWQgPSAnYW1hcC1zY3JpcHQnO1xuICAgICAgICBjb25zdCBhbWFwS2V5ID0gaW1wb3J0Lm1ldGEuZW52LlZJVEVfQU1BUF9LRVkgfHwgJzJiMTRhNzY3MDU3ZDUxNjFkZTk0NDE2MWE2MDY1YjllJztcbiAgICAgICAgc2NyaXB0LnNyYyA9IGBodHRwczovL3dlYmFwaS5hbWFwLmNvbS9tYXBzP3Y9Mi4wJmtleT0ke2FtYXBLZXl9JnBsdWdpbj1BTWFwLk1hcmtlcixBTWFwLk1vdmVBbmltYXRpb25gO1xuICAgICAgICBzY3JpcHQuYXN5bmMgPSB0cnVlO1xuICAgICAgICBzY3JpcHQub25sb2FkID0gKCkgPT4ge1xuICAgICAgICAgIHNldFRpbWVvdXQoaW5pdE1hcCwgNTApO1xuICAgICAgICB9O1xuICAgICAgICBzY3JpcHQub25lcnJvciA9ICgpID0+IHtcbiAgICAgICAgICBjb25zb2xlLndhcm4oXCJBTWFwIENETiBzY3JpcHQgbG9hZCBmYWlsZWQuIFVzaW5nIGJ1aWx0LWluIHZlY3RvciBwbG90IGZhbGxiYWNrLlwiKTtcbiAgICAgICAgICBpZiAoaXNNb3VudGVkKSBzZXRNYXBMb2FkRXJyb3IodHJ1ZSk7XG4gICAgICAgIH07XG4gICAgICAgIGRvY3VtZW50LmhlYWQuYXBwZW5kQ2hpbGQoc2NyaXB0KTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGNvbnN0IHRpbWVyID0gc2V0VGltZW91dChpbml0TWFwLCAyMDApO1xuICAgICAgICByZXR1cm4gKCkgPT4gY2xlYXJUaW1lb3V0KHRpbWVyKTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICByZXR1cm4gKCkgPT4ge1xuICAgICAgaXNNb3VudGVkID0gZmFsc2U7XG4gICAgICBpZiAobWFwSW5zdGFuY2VSZWYuY3VycmVudCAmJiB0eXBlb2YgbWFwSW5zdGFuY2VSZWYuY3VycmVudC5kZXN0cm95ID09PSAnZnVuY3Rpb24nKSB7XG4gICAgICAgIHRyeSB7XG4gICAgICAgICAgbWFwSW5zdGFuY2VSZWYuY3VycmVudC5kZXN0cm95KCk7XG4gICAgICAgIH0gY2F0Y2gge1xuICAgICAgICAgIC8vIGlnbm9yZVxuICAgICAgICB9XG4gICAgICB9XG4gICAgfTtcbiAgfSwgW10pO1xuXG4gIC8vIFBsb3QgYWxsIGRvdHNcbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBpZiAoIW1hcEluaXRpYWxpemVkIHx8ICFtYXBJbnN0YW5jZVJlZi5jdXJyZW50IHx8ICFpc0FjdGl2ZSkgcmV0dXJuO1xuICAgIGNvbnN0IG1hcCA9IG1hcEluc3RhbmNlUmVmLmN1cnJlbnQ7XG4gICAgbWFwLnJlc2l6ZT8uKCk7XG5cbiAgICAvLyBDbGVhciBleGlzdGluZyBkb3RzXG4gICAgaWYgKGRvdHNSZWYuY3VycmVudC5sZW5ndGggPiAwKSB7XG4gICAgICBtYXBJbnN0YW5jZVJlZi5jdXJyZW50LnJlbW92ZShkb3RzUmVmLmN1cnJlbnQpO1xuICAgICAgZG90c1JlZi5jdXJyZW50ID0gW107XG4gICAgfVxuXG4gICAgbG9jYWxEYXRhLmZvckVhY2goKHBvaW50KSA9PiB7XG4gICAgICBjb25zdCBjb2xvciA9IGdldERvdENvbG9yKHBvaW50LCBhY3RpdmVNZXRyaWMsIHRocmVzaG9sZHMpO1xuICAgICAgY29uc3QgZG90ID0gbmV3IHdpbmRvdy5BTWFwLkNpcmNsZU1hcmtlcih7XG4gICAgICAgIGNlbnRlcjogW3BvaW50LmxvbmdpdHVkZSwgcG9pbnQubGF0aXR1ZGVdLFxuICAgICAgICByYWRpdXM6IDQsIFxuICAgICAgICBmaWxsQ29sb3I6IGNvbG9yLFxuICAgICAgICBmaWxsT3BhY2l0eTogMC44LFxuICAgICAgICBzdHJva2VDb2xvcjogXCIjZmZmZmZmXCIsXG4gICAgICAgIHN0cm9rZVdlaWdodDogMSxcbiAgICAgICAgekluZGV4OiAxMCxcbiAgICAgICAgY3Vyc29yOiAncG9pbnRlcicsXG4gICAgICAgIGV4dERhdGE6IHBvaW50XG4gICAgICB9KTtcbiAgICAgIFxuICAgICAgZG90Lm9uKCdjbGljaycsIChlOiBhbnkpID0+IHtcbiAgICAgICAgc2V0U2VsZWN0ZWRQb2ludChlLnRhcmdldC5nZXRFeHREYXRhKCkpO1xuICAgICAgICBtYXBJbnN0YW5jZVJlZi5jdXJyZW50LnBhblRvKFtwb2ludC5sb25naXR1ZGUsIHBvaW50LmxhdGl0dWRlXSk7XG4gICAgICB9KTtcblxuICAgICAgZG90LnNldE1hcChtYXBJbnN0YW5jZVJlZi5jdXJyZW50KTtcbiAgICAgIGRvdHNSZWYuY3VycmVudC5wdXNoKGRvdCk7XG4gICAgfSk7XG5cbiAgICAvLyBGaXQgbmV3IHF1ZXJ5IHJlc3VsdHMgd2l0aG91dCByZXNldHRpbmcgdGhlIHZpZXdwb3J0IG9uIG5hdmlnYXRpb24uXG4gICAgY29uc3QgdGltZXIgPSBzZXRUaW1lb3V0KCgpID0+IHtcbiAgICAgIGlmIChsb2NhbERhdGEubGVuZ3RoID4gMCAmJiBmaXR0ZWREYXRhUmVmLmN1cnJlbnQgIT09IGxvY2FsRGF0YSkge1xuICAgICAgICBtYXAuc2V0Rml0VmlldygpO1xuICAgICAgICBmaXR0ZWREYXRhUmVmLmN1cnJlbnQgPSBsb2NhbERhdGE7XG4gICAgICB9XG4gICAgfSwgNTAwKTtcbiAgICByZXR1cm4gKCkgPT4gY2xlYXJUaW1lb3V0KHRpbWVyKTtcblxuICB9LCBbbG9jYWxEYXRhLCBhY3RpdmVNZXRyaWMsIHRocmVzaG9sZHMsIG1hcEluaXRpYWxpemVkLCBpc0FjdGl2ZV0pO1xuXG4gIGNvbnN0IGN1cnJlbnRNZXRyaWNWYWx1ZSA9IHNlbGVjdGVkUG9pbnQ/LlthY3RpdmVNZXRyaWNdO1xuXG4gIGNvbnN0IGNvb3Jkc0JvdW5kcyA9IFJlYWN0LnVzZU1lbW8oKCkgPT4ge1xuICAgIGlmIChsb2NhbERhdGEubGVuZ3RoID09PSAwKSByZXR1cm4geyBtaW5MYXQ6IDM5LjksIG1heExhdDogNDAuMCwgbWluTG9uOiAxMTYuMywgbWF4TG9uOiAxMTYuNCB9O1xuICAgIGxldCBtaW5MYXQgPSBJbmZpbml0eSwgbWF4TGF0ID0gLUluZmluaXR5LCBtaW5Mb24gPSBJbmZpbml0eSwgbWF4TG9uID0gLUluZmluaXR5O1xuICAgIGxvY2FsRGF0YS5mb3JFYWNoKGQgPT4ge1xuICAgICAgaWYgKGQubGF0aXR1ZGUgPCBtaW5MYXQpIG1pbkxhdCA9IGQubGF0aXR1ZGU7XG4gICAgICBpZiAoZC5sYXRpdHVkZSA+IG1heExhdCkgbWF4TGF0ID0gZC5sYXRpdHVkZTtcbiAgICAgIGlmIChkLmxvbmdpdHVkZSA8IG1pbkxvbikgbWluTG9uID0gZC5sb25naXR1ZGU7XG4gICAgICBpZiAoZC5sb25naXR1ZGUgPiBtYXhMb24pIG1heExvbiA9IGQubG9uZ2l0dWRlO1xuICAgIH0pO1xuICAgIGNvbnN0IHBhZExhdCA9IE1hdGgubWF4KChtYXhMYXQgLSBtaW5MYXQpICogMC4xLCAwLjAwMSk7XG4gICAgY29uc3QgcGFkTG9uID0gTWF0aC5tYXgoKG1heExvbiAtIG1pbkxvbikgKiAwLjEsIDAuMDAxKTtcbiAgICByZXR1cm4geyBtaW5MYXQ6IG1pbkxhdCAtIHBhZExhdCwgbWF4TGF0OiBtYXhMYXQgKyBwYWRMYXQsIG1pbkxvbjogbWluTG9uIC0gcGFkTG9uLCBtYXhMb246IG1heExvbiArIHBhZExvbiB9O1xuICB9LCBbbG9jYWxEYXRhXSk7XG5cbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cImgtZnVsbCBmbGV4IGZsZXgtY29sIHJlbGF0aXZlIGJnLWJsYWNrIHJvdW5kZWQteGwgb3ZlcmZsb3ctaGlkZGVuIHNoYWRvdy1pbm5lciBib3JkZXIgYm9yZGVyLXdoaXRlLzVcIj5cbiAgICAgIHsvKiBIVUQgTGF5ZXIgKi99XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIHRvcC00IGxlZnQtNCB6LTEwIGZsZXggZmxleC1jb2wgZ2FwLTQgdy03MlwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLWJsYWNrLzYwIGJhY2tkcm9wLWJsdXIgYm9yZGVyIGJvcmRlci13aGl0ZS8xMCBwLTQgcm91bmRlZC14bCBzaGFkb3ctbGcgdHJhbnNpdGlvbi1hbGxcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBtYi00XCI+XG4gICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LWJvbGQgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgdGV4dC13aGl0ZSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXJcIj5cbiAgICAgICAgICAgICAgPE1hcCBjbGFzc05hbWU9XCJ3LTQgaC00IHRleHQtZGlhZy1hY2NlbnRcIiAvPiDlrprkvY3mlbDmja7liIbmnpBcbiAgICAgICAgICAgIDwvaDM+XG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXhzIHRleHQtZ3JheS00MDAgZm9udC1tb25vXCI+5YWxIHtsb2NhbERhdGEubGVuZ3RofSDkuKrngrnkvY08L3NwYW4+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAge2xvY2FsRGF0YS5sZW5ndGggPT09IDAgJiYgKFxuICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC14cyB0ZXh0LWdyYXktNDAwIG1iLTNcIj5cbiAgICAgICAgICAgICAge2hhc1F1ZXJ5ID8gJ+aJgOmAiSBDU1Yg5ZKM5pe26Ze06IyD5Zu05YaF5rKh5pyJ5pyJ5pWI5a6a5L2N54K577yM6K+36LCD5pW05pWw5o2u6YCJ5oup44CCJyA6ICfor7flhYjlnKjmlbDmja7lj6/op4bljJbkuK3pgInmi6kgQ1NWIOWSjOaXtumXtOiMg+WbtO+8jOeCueWHu+KAnOehruiupOW5tuWIhuaekOKAneOAgid9XG4gICAgICAgICAgICA8L3A+XG4gICAgICAgICAgKX1cbiAgICAgICAgICBcbiAgICAgICAgICB7c2VsZWN0ZWRQb2ludCA/IChcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBncmlkLWNvbHMtMiBnYXAtNCBtYi0yXCI+XG4gICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LVsxMHB4XSB0ZXh0LWdyYXktNDAwIGZvbnQtYm9sZCB1cHBlcmNhc2UgbWItMVwiPuaXtumXtOaIszwvZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LW1vbm8gdGV4dC1kaWFnLWFjY2VudCB0cnVuY2F0ZVwiIHRpdGxlPXtzZWxlY3RlZFBvaW50LnRpbWVzdGFtcH0+e3NlbGVjdGVkUG9pbnQudGltZXN0YW1wfTwvZGl2PlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtWzEwcHhdIHRleHQtZ3JheS00MDAgZm9udC1ib2xkIHVwcGVyY2FzZSBtYi0xXCI+57Si5byVPC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LXNtIGZvbnQtbW9ubyB0ZXh0LXdoaXRlXCI+XG4gICAgICAgICAgICAgICAgICAje3NlbGVjdGVkUG9pbnQuaW5kZXh9XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1bMTBweF0gdGV4dC1ncmF5LTQwMCBmb250LWJvbGQgdXBwZXJjYXNlIG1iLTFcIj7nu4/luqY8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQteHMgZm9udC1tb25vIHRleHQtd2hpdGVcIj57c2VsZWN0ZWRQb2ludC5sb25naXR1ZGUudG9GaXhlZCg2KX08L2Rpdj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LVsxMHB4XSB0ZXh0LWdyYXktNDAwIGZvbnQtYm9sZCB1cHBlcmNhc2UgbWItMVwiPue6rOW6pjwvZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC14cyBmb250LW1vbm8gdGV4dC13aGl0ZVwiPntzZWxlY3RlZFBvaW50LmxhdGl0dWRlLnRvRml4ZWQoNil9PC9kaXY+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbC1zcGFuLTIgYmctd2hpdGUvNSBwLTIgcm91bmRlZCBib3JkZXIgYm9yZGVyLXdoaXRlLzUgbXQtMlwiPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1bMTBweF0gdGV4dC1ncmF5LTQwMCBmb250LWJvbGQgdXBwZXJjYXNlIG1iLTEgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuXCI+XG4gICAgICAgICAgICAgICAgICA8c3Bhbj7mo4DmtYvlgLwgKHthY3RpdmVNZXRyaWN9KTwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgXG4gICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInctMiBoLTIgcm91bmRlZC1mdWxsIHNoYWRvdy1bMF8wXzhweF9yZ2JhKDI1NSwyNTUsMjU1LDAuNSldXCIgXG4gICAgICAgICAgICAgICAgICAgIHN0eWxlPXt7IGJhY2tncm91bmRDb2xvcjogZ2V0RG90Q29sb3Ioc2VsZWN0ZWRQb2ludCwgYWN0aXZlTWV0cmljLCB0aHJlc2hvbGRzKSB9fVxuICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQteGwgZm9udC1tb25vIGZvbnQtYm9sZCB0ZXh0LXdoaXRlIGZsZXggaXRlbXMtZW5kIGdhcC0yXCI+XG4gICAgICAgICAgICAgICAgICB7Y3VycmVudE1ldHJpY1ZhbHVlICE9PSBudWxsICYmIGN1cnJlbnRNZXRyaWNWYWx1ZSAhPT0gdW5kZWZpbmVkIFxuICAgICAgICAgICAgICAgICAgICA/IE51bWJlcihjdXJyZW50TWV0cmljVmFsdWUpLnRvTG9jYWxlU3RyaW5nKCkgXG4gICAgICAgICAgICAgICAgICAgIDogJy0tJ31cbiAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtWzEwcHhdIHRleHQtZ3JheS01MDAgZm9udC1ub3JtYWwgcGItMSB0cmFja2luZy13aWRlc3QgdXBwZXJjYXNlXCI+XG4gICAgICAgICAgICAgICAgICAgIHthY3RpdmVNZXRyaWMuc3BsaXQoJ18nKVsxXSA9PT0gJ21zJyA/ICdtcycgOiBhY3RpdmVNZXRyaWMuc3BsaXQoJ18nKVsxXSA9PT0gJ2JwcycgPyAnYnBzJyA6ICclJ31cbiAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICApIDogKFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJoLTQwIGZsZXggZmxleC1jb2wgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHRleHQtZ3JheS01MDAgZ2FwLTMgYm9yZGVyIGJvcmRlci1kYXNoZWQgYm9yZGVyLXdoaXRlLzEwIHJvdW5kZWQtbGcgYmctd2hpdGUvNVwiPlxuICAgICAgICAgICAgICA8TW91c2VQb2ludGVyMiBjbGFzc05hbWU9XCJ3LTYgaC02IG9wYWNpdHktNTBcIiAvPlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhzXCI+54K55Ye75Zyw5Zu+5LiK55qE5qCH6K6w54K55p+l55yL6K+m5oOFPC9wPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgKX1cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cblxuICAgICAgey8qIFNldHRpbmdzIFRvZ2dsZSAqL31cbiAgICAgIDxidXR0b24gXG4gICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRTaG93U2V0dGluZ3MoIXNob3dTZXR0aW5ncyl9XG4gICAgICAgIGNsYXNzTmFtZT1cImFic29sdXRlIHRvcC00IHJpZ2h0LTQgei0yMCBiZy1ibGFjay82MCBiYWNrZHJvcC1ibHVyIGJvcmRlciBib3JkZXItd2hpdGUvMTAgcC0yIHJvdW5kZWQtbGcgc2hhZG93LWxnIHRleHQtZ3JheS00MDAgaG92ZXI6dGV4dC13aGl0ZSB0cmFuc2l0aW9uLWNvbG9yc1wiXG4gICAgICA+XG4gICAgICAgIDxTZXR0aW5nczIgY2xhc3NOYW1lPVwidy01IGgtNVwiIC8+XG4gICAgICA8L2J1dHRvbj5cblxuICAgICAgey8qIFNldHRpbmdzIFBhbmVsICovfVxuICAgICAge3Nob3dTZXR0aW5ncyAmJiAoXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWJzb2x1dGUgdG9wLTE2IHJpZ2h0LTQgei0yMCBiZy1ibGFjay84MCBiYWNrZHJvcC1ibHVyIGJvcmRlciBib3JkZXItd2hpdGUvMTAgcC01IHJvdW5kZWQteGwgc2hhZG93LXhsIHctODAgdGV4dC1ncmF5LTIwMFwiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGp1c3RpZnktYmV0d2VlbiBpdGVtcy1jZW50ZXIgbWItNFwiPlxuICAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cInRleHQtc20gZm9udC1ib2xkIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciB0ZXh0LXdoaXRlXCI+6aKc6Imy5qCH6K6w6K6+572uPC9oMz5cbiAgICAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17KCkgPT4gc2V0U2hvd1NldHRpbmdzKGZhbHNlKX0gY2xhc3NOYW1lPVwidGV4dC1ncmF5LTQwMCBob3Zlcjp0ZXh0LXdoaXRlXCI+PFggY2xhc3NOYW1lPVwidy00IGgtNFwiIC8+PC9idXR0b24+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzcGFjZS15LTRcIj5cbiAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cInRleHQteHMgdGV4dC1ncmF5LTQwMCBtYi0yIGJsb2NrXCI+5pWw5o2u5L6d5o2uIChNZXRyaWMpPC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgPHNlbGVjdCBcbiAgICAgICAgICAgICAgICAgICB2YWx1ZT17YWN0aXZlTWV0cmljfVxuICAgICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXsoZSkgPT4gc2V0QWN0aXZlTWV0cmljKGUudGFyZ2V0LnZhbHVlIGFzIE1ldHJpY1R5cGUpfVxuICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInctZnVsbCBiZy13aGl0ZS8xMCBib3JkZXIgYm9yZGVyLXdoaXRlLzEwIHJvdW5kZWQtbGcgcHgtMyBweS0yIHRleHQtc20gdGV4dC13aGl0ZSBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWRpYWctYWNjZW50IGFwcGVhcmFuY2Utbm9uZSBjdXJzb3ItcG9pbnRlclwiXG4gICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPVwiYXZnX3J0dF9tc1wiIGNsYXNzTmFtZT1cImJnLWdyYXktOTAwXCI+5bmz5Z2H5bu26L+fIChSVFQpPC9vcHRpb24+XG4gICAgICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT1cImppdHRlcl9tc1wiIGNsYXNzTmFtZT1cImJnLWdyYXktOTAwXCI+5oqW5YqoIChKaXR0ZXIpPC9vcHRpb24+XG4gICAgICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT1cInRocm91Z2hwdXRfYnBzXCIgY2xhc3NOYW1lPVwiYmctZ3JheS05MDBcIj7lkJ7lkJDph48gKFRocm91Z2hwdXQpPC9vcHRpb24+XG4gICAgICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT1cImxvc3NfcmF0ZVwiIGNsYXNzTmFtZT1cImJnLWdyYXktOTAwXCI+5Lii5YyF546HIChMb3NzIFJhdGUpPC9vcHRpb24+XG4gICAgICAgICAgICAgICAgIDwvc2VsZWN0PlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC0zIGJnLXdoaXRlLzUgcm91bmRlZC1sZyBib3JkZXIgYm9yZGVyLXdoaXRlLzUgc3BhY2UteS0zXCI+XG4gICAgICAgICAgICAgICAgIDxoNCBjbGFzc05hbWU9XCJ0ZXh0LXhzIGZvbnQtYm9sZCB0ZXh0LWdyYXktMzAwXCI+5pWw5o2u6IyD5Zu06ZiI5YC8PC9oND5cbiAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTNcIj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTMgaC0zIHJvdW5kZWQtZnVsbCBiZy1ncmVlbi01MDAgc2hyaW5rLTAgc2hhZG93LVswXzBfOHB4X3JnYmEoMzQsMTk3LDk0LDAuNildXCI+PC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQteHMgZmxleC0xIHRleHQtZ3JheS00MDAgZm9udC1tb25vXCI+6Imv5aW9IHthY3RpdmVNZXRyaWMgPT09ICd0aHJvdWdocHV0X2JwcycgPyAnPj0nIDogJzw9J308L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDxpbnB1dCBcbiAgICAgICAgICAgICAgICAgICAgICB0eXBlPVwibnVtYmVyXCJcbiAgICAgICAgICAgICAgICAgICAgICB2YWx1ZT17dGhyZXNob2xkc1thY3RpdmVNZXRyaWNdLmdvb2R9XG4gICAgICAgICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRUaHJlc2hvbGRzKHByZXYgPT4gKHsgLi4ucHJldiwgW2FjdGl2ZU1ldHJpY106IHsgLi4ucHJldlthY3RpdmVNZXRyaWNdLCBnb29kOiBOdW1iZXIoZS50YXJnZXQudmFsdWUpIH0gfSkpfVxuICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInctMjQgYmctYmxhY2svNTAgYm9yZGVyIGJvcmRlci13aGl0ZS8xMCByb3VuZGVkIHB4LTIgcHktMSB0ZXh0LXhzIHRleHQtd2hpdGUgdGV4dC1yaWdodCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWRpYWctYWNjZW50XCJcbiAgICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0zXCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy0zIGgtMyByb3VuZGVkLWZ1bGwgYmcteWVsbG93LTUwMCBzaHJpbmstMCBzaGFkb3ctWzBfMF84cHhfcmdiYSgyMzQsMTc5LDgsMC42KV1cIj48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC14cyBmbGV4LTEgdGV4dC1ncmF5LTQwMCBmb250LW1vbm9cIj7orablkYrpmIjlgLw8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDxpbnB1dCBcbiAgICAgICAgICAgICAgICAgICAgICB0eXBlPVwibnVtYmVyXCJcbiAgICAgICAgICAgICAgICAgICAgICB2YWx1ZT17dGhyZXNob2xkc1thY3RpdmVNZXRyaWNdLndhcm5pbmd9XG4gICAgICAgICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRUaHJlc2hvbGRzKHByZXYgPT4gKHsgLi4ucHJldiwgW2FjdGl2ZU1ldHJpY106IHsgLi4ucHJldlthY3RpdmVNZXRyaWNdLCB3YXJuaW5nOiBOdW1iZXIoZS50YXJnZXQudmFsdWUpIH0gfSkpfVxuICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInctMjQgYmctYmxhY2svNTAgYm9yZGVyIGJvcmRlci13aGl0ZS8xMCByb3VuZGVkIHB4LTIgcHktMSB0ZXh0LXhzIHRleHQtd2hpdGUgdGV4dC1yaWdodCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ym9yZGVyLWRpYWctYWNjZW50XCJcbiAgICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0zXCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy0zIGgtMyByb3VuZGVkLWZ1bGwgYmctcmVkLTUwMCBzaHJpbmstMCBzaGFkb3ctWzBfMF84cHhfcmdiYSgyMzksNjgsNjgsMC42KV1cIj48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC14cyBmbGV4LTEgdGV4dC1ncmF5LTQwMCBmb250LW1vbm9cIj7ovoPlt64ge2FjdGl2ZU1ldHJpYyA9PT0gJ3Rocm91Z2hwdXRfYnBzJyA/ICc8JyA6ICc+J30g6K2m5ZGKPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctMjQgdGV4dC1yaWdodCBweC0yIHB5LTEgdGV4dC14cyB0ZXh0LWdyYXktNjAwIGZvbnQtbW9ub1wiPlxuICAgICAgICAgICAgICAgICAgICAgIOiHquWKqOiuoeeul1xuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgKX1cblxuICAgICAgPGRpdiByZWY9e21hcENvbnRhaW5lclJlZn0gY2xhc3NOYW1lPXtjbihcInctZnVsbCBoLWZ1bGxcIiwgbWFwTG9hZEVycm9yID8gXCJoaWRkZW5cIiA6IFwiYmxvY2tcIil9IC8+XG5cbiAgICAgIHttYXBMb2FkRXJyb3IgJiYgKFxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctZnVsbCBoLWZ1bGwgZmxleCBmbGV4LWNvbCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcC04IGJnLVsjMDkwZDE2XSByZWxhdGl2ZSBzZWxlY3Qtbm9uZVwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWJzb2x1dGUgdG9wLTQgcmlnaHQtNCB6LTEwIHB4LTMgcHktMSBiZy15ZWxsb3ctNTAwLzEwIGJvcmRlciBib3JkZXIteWVsbG93LTUwMC8yMCB0ZXh0LXllbGxvdy00MDAgdGV4dC14cyByb3VuZGVkLWZ1bGwgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEuNSBmb250LW1vbm9cIj5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInctMiBoLTIgcm91bmRlZC1mdWxsIGJnLXllbGxvdy00MDAgYW5pbWF0ZS1wdWxzZVwiIC8+XG4gICAgICAgICAgICDnprvnur/pq5jnsr7ovajov7nop4blm74gKOmrmOW+t+WcsOWbvuWklumDqOacjeWKoeS4jeWPr+eUqOaXtuiHquWKqOWQr+eUqClcbiAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgIDxzdmcgY2xhc3NOYW1lPVwidy1mdWxsIGgtZnVsbFwiIHZpZXdCb3g9XCIwIDAgMTAwMCA2MDBcIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPVwieE1pZFlNaWQgbWVldFwiPlxuICAgICAgICAgICAgPGRlZnM+XG4gICAgICAgICAgICAgIDxwYXR0ZXJuIGlkPVwiZ3JpZFwiIHdpZHRoPVwiNDBcIiBoZWlnaHQ9XCI0MFwiIHBhdHRlcm5Vbml0cz1cInVzZXJTcGFjZU9uVXNlXCI+XG4gICAgICAgICAgICAgICAgPHBhdGggZD1cIk0gNDAgMCBMIDAgMCAwIDQwXCIgZmlsbD1cIm5vbmVcIiBzdHJva2U9XCJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpXCIgc3Ryb2tlV2lkdGg9XCIxXCIgLz5cbiAgICAgICAgICAgICAgPC9wYXR0ZXJuPlxuICAgICAgICAgICAgPC9kZWZzPlxuICAgICAgICAgICAgPHJlY3Qgd2lkdGg9XCIxMDAwXCIgaGVpZ2h0PVwiNjAwXCIgZmlsbD1cInVybCgjZ3JpZClcIiAvPlxuXG4gICAgICAgICAgICB7LyogQ29ubmVjdGluZyBsaW5lIGJldHdlZW4gY29uc2VjdXRpdmUgcG9pbnRzICovfVxuICAgICAgICAgICAge2xvY2FsRGF0YS5sZW5ndGggPiAxICYmIChcbiAgICAgICAgICAgICAgPHBvbHlsaW5lXG4gICAgICAgICAgICAgICAgZmlsbD1cIm5vbmVcIlxuICAgICAgICAgICAgICAgIHN0cm9rZT1cInJnYmEoNTksMTMwLDI0NiwwLjMpXCJcbiAgICAgICAgICAgICAgICBzdHJva2VXaWR0aD1cIjJcIlxuICAgICAgICAgICAgICAgIHN0cm9rZURhc2hhcnJheT1cIjQgMlwiXG4gICAgICAgICAgICAgICAgcG9pbnRzPXtsb2NhbERhdGEubWFwKHAgPT4ge1xuICAgICAgICAgICAgICAgICAgY29uc3QgeCA9IDUwICsgKChwLmxvbmdpdHVkZSAtIGNvb3Jkc0JvdW5kcy5taW5Mb24pIC8gKGNvb3Jkc0JvdW5kcy5tYXhMb24gLSBjb29yZHNCb3VuZHMubWluTG9uIHx8IDEpKSAqIDkwMDtcbiAgICAgICAgICAgICAgICAgIGNvbnN0IHkgPSA1NTAgLSAoKHAubGF0aXR1ZGUgLSBjb29yZHNCb3VuZHMubWluTGF0KSAvIChjb29yZHNCb3VuZHMubWF4TGF0IC0gY29vcmRzQm91bmRzLm1pbkxhdCB8fCAxKSkgKiA1MDA7XG4gICAgICAgICAgICAgICAgICByZXR1cm4gYCR7eH0sJHt5fWA7XG4gICAgICAgICAgICAgICAgfSkuam9pbignICcpfVxuICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgKX1cblxuICAgICAgICAgICAgey8qIFRyYWplY3RvcnkgZG90cyAqL31cbiAgICAgICAgICAgIHtsb2NhbERhdGEubWFwKChwb2ludCkgPT4ge1xuICAgICAgICAgICAgICBjb25zdCB4ID0gNTAgKyAoKHBvaW50LmxvbmdpdHVkZSAtIGNvb3Jkc0JvdW5kcy5taW5Mb24pIC8gKGNvb3Jkc0JvdW5kcy5tYXhMb24gLSBjb29yZHNCb3VuZHMubWluTG9uIHx8IDEpKSAqIDkwMDtcbiAgICAgICAgICAgICAgY29uc3QgeSA9IDU1MCAtICgocG9pbnQubGF0aXR1ZGUgLSBjb29yZHNCb3VuZHMubWluTGF0KSAvIChjb29yZHNCb3VuZHMubWF4TGF0IC0gY29vcmRzQm91bmRzLm1pbkxhdCB8fCAxKSkgKiA1MDA7XG4gICAgICAgICAgICAgIGNvbnN0IGNvbG9yID0gZ2V0RG90Q29sb3IocG9pbnQsIGFjdGl2ZU1ldHJpYywgdGhyZXNob2xkcyk7XG4gICAgICAgICAgICAgIGNvbnN0IGlzU2VsZWN0ZWQgPSBzZWxlY3RlZFBvaW50Py5pbmRleCA9PT0gcG9pbnQuaW5kZXg7XG5cbiAgICAgICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICAgICA8ZyBrZXk9e3BvaW50LmluZGV4fSBvbkNsaWNrPXsoKSA9PiBzZXRTZWxlY3RlZFBvaW50KHBvaW50KX0gY2xhc3NOYW1lPVwiY3Vyc29yLXBvaW50ZXIgZ3JvdXBcIj5cbiAgICAgICAgICAgICAgICAgIHtpc1NlbGVjdGVkICYmIChcbiAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD17eH0gY3k9e3l9IHI9ezEwfSBmaWxsPVwibm9uZVwiIHN0cm9rZT1cIiM2MGE1ZmFcIiBzdHJva2VXaWR0aD17Mn0gY2xhc3NOYW1lPVwiYW5pbWF0ZS1waW5nXCIgb3BhY2l0eT17MC43fSAvPlxuICAgICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgICAgIDxjaXJjbGVcbiAgICAgICAgICAgICAgICAgICAgY3g9e3h9XG4gICAgICAgICAgICAgICAgICAgIGN5PXt5fVxuICAgICAgICAgICAgICAgICAgICByPXtpc1NlbGVjdGVkID8gNiA6IDR9XG4gICAgICAgICAgICAgICAgICAgIGZpbGw9e2NvbG9yfVxuICAgICAgICAgICAgICAgICAgICBzdHJva2U9XCIjZmZmZmZmXCJcbiAgICAgICAgICAgICAgICAgICAgc3Ryb2tlV2lkdGg9e2lzU2VsZWN0ZWQgPyAyIDogMX1cbiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidHJhbnNpdGlvbi1hbGwgaG92ZXI6ci02XCJcbiAgICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgPC9nPlxuICAgICAgICAgICAgICApO1xuICAgICAgICAgICAgfSl9XG4gICAgICAgICAgPC9zdmc+XG4gICAgICAgIDwvZGl2PlxuICAgICAgKX1cbiAgICA8L2Rpdj5cbiAgKTtcbn1cbiJdLCJmaWxlIjoiRDovWlFZL2lvdi1kYXRhLWNvbGxlY3Rvci0odWUtc3RhY2spL2Zyb250ZW5kL3NyYy9jb21wb25lbnRzL0dwc1RyYWNrZXJWaWV3LnRzeCJ9

@@ -1,0 +1,29 @@
+{
+	"Name": "FTP Download Throughput",
+	"ColWidth": [
+		85, 80, 70, 70, 70, 70
+	],
+	"Params": [
+		{
+			"ParamCode": 66912256,
+			"ParamName": "Time",
+			"ColType": 1
+		}, {
+			"ParamCode": 66912256,
+			"ParamName": "#",
+			"Visible": false
+		}, {
+			"ParamCode": 66912259,
+			"ParamName": "Task No."
+		}, {
+			"ParamCode": 66912261,
+			"ParamName": "Download Size [Byte]"
+		}, {
+			"ParamCode": 66912262,
+			"ParamName": "Download Time [ms]"
+		}, {
+			"ParamCode": 66912263,
+			"ParamName": "Throughput [kbps]"
+		}
+	]
+}

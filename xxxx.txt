@@ -1,0 +1,22 @@
+启动后端
+cd /d "D:\ZQY\iov-data-collector-(ue-stack)"
+npm run dev --prefix backend
+启动前端
+cd /d "D:\ZQY\iov-data-collector-(ue-stack)"
+npm run dev --prefix frontend
+
+
+
+这是packet_collector的
+cd /d D:\ZQY
+call zqy\Scripts\activate.bat
+cd packet_collector
+python -m packet_collector.orchestration.configured_capture --config config.json
+
+python -m packet_collector.orchestration.configured_capture --config config.json --no-video
+
+
+这是无线端采集
+cd /d D:\ZQY\radio_capture\BJTUCC-main
+call .venv32\Scripts\activate.bat
+python -m radio_capture.cli --config configs\config.json

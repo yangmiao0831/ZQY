@@ -1,0 +1,8 @@
+namespace Microsoft.Office.Core;
+
+public enum MsoCustomXMLValidationErrorType
+{
+	msoCustomXMLValidationErrorSchemaGenerated,
+	msoCustomXMLValidationErrorAutomaticallyCleared,
+	msoCustomXMLValidationErrorManual
+}

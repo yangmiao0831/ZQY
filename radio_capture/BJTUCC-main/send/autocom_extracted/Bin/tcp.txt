@@ -1,0 +1,4 @@
+{
+	"TCP_Windows_SendBufferSize": 512000,
+	"TCP_Windows_RecvBufferSize": 2048000
+}

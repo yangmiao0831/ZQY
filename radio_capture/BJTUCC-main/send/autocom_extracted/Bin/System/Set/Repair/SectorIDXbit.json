@@ -1,0 +1,15 @@
+{
+  "name": "updateSectorId",
+  "describe": "n bit sector id",
+  "lastupdate": "2021-09-17 15:25:15",
+  "auth": "system",
+  "algorithm": {
+    "id": 1,
+    "type": 1,
+    "version": "1.0",
+    "args": {
+      "bit": 12
+    },
+    "content": "ZmJydWJ1MlZBJnVFcWRme3Z0UHd6eEZxYHl+dmZzZjZjd2wzdlx5cHNyW1wucHd6eH90LCZo\r\nMHB/YGs8QX1wZ31kXVItcX1/f3tyMj5gfW92YTokOG0zcHFnbjs7JT8wZXB2YXc2V3N8flFX\r\nM3tlNHh/Zjh9Zn56Lw=="
+  }
+}

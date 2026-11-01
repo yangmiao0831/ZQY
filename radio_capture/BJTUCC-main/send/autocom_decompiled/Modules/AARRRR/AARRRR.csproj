@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>AARRRR</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>Exe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net45</TargetFramework>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="hAM7jQYubhbdB7y7Lb.2OolaYynH8CXWtkEG7" />
+    <None Remove="lmXYMHfUYBfjldPT9K.hnJqxnjvxnAtIHe59U" />
+    <None Remove="bKDAEB4IBDi7qPlaMV.Bu3vpDKGJxWR09dwoa" />
+    <None Remove="vmFJKEauVC539PfYdK.07vufUAIyhJH3KoQ3n" />
+    <None Remove="c5OeSEmLaE5E8CEyZH.qoKpuEMOwgF4CxLT8e" />
+    <EmbeddedResource Include="hAM7jQYubhbdB7y7Lb.2OolaYynH8CXWtkEG7" LogicalName="hAM7jQYubhbdB7y7Lb.2OolaYynH8CXWtkEG7" />
+    <EmbeddedResource Include="lmXYMHfUYBfjldPT9K.hnJqxnjvxnAtIHe59U" LogicalName="lmXYMHfUYBfjldPT9K.hnJqxnjvxnAtIHe59U" />
+    <EmbeddedResource Include="bKDAEB4IBDi7qPlaMV.Bu3vpDKGJxWR09dwoa" LogicalName="bKDAEB4IBDi7qPlaMV.Bu3vpDKGJxWR09dwoa" />
+    <EmbeddedResource Include="vmFJKEauVC539PfYdK.07vufUAIyhJH3KoQ3n" LogicalName="vmFJKEauVC539PfYdK.07vufUAIyhJH3KoQ3n" />
+    <EmbeddedResource Include="c5OeSEmLaE5E8CEyZH.qoKpuEMOwgF4CxLT8e" LogicalName="c5OeSEmLaE5E8CEyZH.qoKpuEMOwgF4CxLT8e" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Core">
+      <HintPath>../../../../../../../../../usr/lib/dotnet/shared/Microsoft.NETCore.App/8.0.28/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>autocom_extracted/Bin/EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>autocom_extracted/Bin/NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>autocom_extracted/Bin/NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>autocom_extracted/Bin/Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>../../../../../../../../../usr/lib/dotnet/shared/Microsoft.NETCore.App/8.0.28/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>autocom_extracted/Bin/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>autocom_extracted/Bin/NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word">
+      <HintPath>autocom_extracted/Bin/Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0">
+      <HintPath>autocom_extracted/Bin/Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

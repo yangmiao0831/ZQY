@@ -1,0 +1,3 @@
+cd /d E:\radio_capture\BJTUCC-main
+call .venv32\Scripts\activate.bat
+python -m radio_capture.cli --config configs\config.json

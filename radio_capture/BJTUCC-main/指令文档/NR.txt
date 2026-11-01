@@ -1,0 +1,20 @@
+AT
+AT+QNWPREFCFG="nr5g_disable_mode",0
+AT+QNWPREFCFG="mode_pref",NR5G
+AT+QNWPREFCFG="rat_acq_order",NR5G
+AT+CFUN=1,1
+
+
+AT+QNWPREFCFG="mode_pref"
+AT+QNWPREFCFG="rat_acq_order"
+AT+QNWPREFCFG="nr5g_disable_mode"
+AT+QNWINFO
+AT+QENG="servingcell"
+AT+QCSQ
+
++QNWPREFCFG: "mode_pref",NR5G
++QNWPREFCFG: "rat_acq_order",NR5G
++QNWPREFCFG: "nr5g_disable_mode",0
++QNWINFO: "TDD NR5G",...
++QENG: "servingcell","NOCONN","NR5G-SA",...
++QCSQ: "NR5G",...

@@ -1,0 +1,797 @@
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_151827 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=78402
+qwinlog raw init cfg_frame=20/82 bytes=501343
+qwinlog raw init cfg_frame=40/82 bytes=1629042
+qwinlog raw init cfg_frame=60/82 bytes=3480434
+qwinlog raw init cfg_frame=80/82 bytes=4924981
+qwinlog raw init cfg_frame=82/82 bytes=5137973
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=24851459 packets=20074 valid=19991 invalid=83
+capture stopped enqueued=19991 persisted=2748 dropped=0 raw_dir=configs\..\captures\session_20261007_151827 callback_calls=0 callback_received=19991 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=24851459 raw_packets=20074 raw_valid=19991 raw_invalid=83
+AT capture records=41 csv=configs\..\captures\session_20261007_151827\at_metrics.csv lte_csv=configs\..\captures\session_20261007_151827\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_151827\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_151827\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_152025 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=96481
+qwinlog raw init cfg_frame=20/82 bytes=560475
+qwinlog raw init cfg_frame=40/82 bytes=1585492
+qwinlog raw init cfg_frame=60/82 bytes=2799892
+qwinlog raw init cfg_frame=80/82 bytes=4183114
+qwinlog raw init cfg_frame=82/82 bytes=4183249
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=16285779 packets=12467 valid=12467 invalid=0
+capture stopped enqueued=12467 persisted=2375 dropped=0 raw_dir=configs\..\captures\session_20261007_152025 callback_calls=0 callback_received=12467 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=16285779 raw_packets=12467 raw_valid=12467 raw_invalid=0
+AT capture records=32 csv=configs\..\captures\session_20261007_152025\at_metrics.csv lte_csv=configs\..\captures\session_20261007_152025\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_152025\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_152025\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_152307 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=46604
+qwinlog raw init cfg_frame=20/82 bytes=779115
+qwinlog raw init cfg_frame=40/82 bytes=2054518
+qwinlog raw init cfg_frame=60/82 bytes=3573940
+qwinlog raw init cfg_frame=80/82 bytes=5376180
+qwinlog raw init cfg_frame=82/82 bytes=5572788
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=49437070 packets=40716 valid=40715 invalid=1
+capture stopped enqueued=40715 persisted=4491 dropped=0 raw_dir=configs\..\captures\session_20261007_152307 callback_calls=0 callback_received=40715 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=49437070 raw_packets=40716 raw_valid=40715 raw_invalid=1
+AT capture records=61 csv=configs\..\captures\session_20261007_152307\at_metrics.csv lte_csv=configs\..\captures\session_20261007_152307\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_152307\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_152307\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_152400 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=120527
+qwinlog raw init cfg_frame=20/82 bytes=850473
+qwinlog raw init cfg_frame=40/82 bytes=2079309
+qwinlog raw init cfg_frame=60/82 bytes=3848781
+qwinlog raw init cfg_frame=80/82 bytes=5808755
+qwinlog raw init cfg_frame=82/82 bytes=5988979
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=18061913 packets=14621 valid=14441 invalid=180
+capture stopped enqueued=14441 persisted=1356 dropped=0 raw_dir=configs\..\captures\session_20261007_152400 callback_calls=0 callback_received=14441 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=18061913 raw_packets=14621 raw_valid=14441 raw_invalid=180
+AT capture records=24 csv=configs\..\captures\session_20261007_152400\at_metrics.csv lte_csv=configs\..\captures\session_20261007_152400\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_152400\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_152400\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_153811 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=122203
+qwinlog raw init cfg_frame=20/82 bytes=690942
+qwinlog raw init cfg_frame=40/82 bytes=2025289
+qwinlog raw init cfg_frame=60/82 bytes=3791435
+qwinlog raw init cfg_frame=80/82 bytes=5189585
+qwinlog raw init cfg_frame=82/82 bytes=5326752
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=75517001 packets=55153 valid=55153 invalid=0
+capture stopped enqueued=55153 persisted=7531 dropped=0 raw_dir=configs\..\captures\session_20261007_153811 callback_calls=0 callback_received=55153 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=75517001 raw_packets=55153 raw_valid=55153 raw_invalid=0
+AT capture records=103 csv=configs\..\captures\session_20261007_153811\at_metrics.csv lte_csv=configs\..\captures\session_20261007_153811\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_153811\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_153811\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_154015 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=127691
+qwinlog raw init cfg_frame=20/82 bytes=808453
+qwinlog raw init cfg_frame=40/82 bytes=2031649
+qwinlog raw init cfg_frame=60/82 bytes=3653589
+qwinlog raw init cfg_frame=80/82 bytes=5380687
+qwinlog raw init cfg_frame=82/82 bytes=5544527
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=96270485 packets=66338 valid=66333 invalid=5
+capture stopped enqueued=66333 persisted=11227 dropped=0 raw_dir=configs\..\captures\session_20261007_154015 callback_calls=0 callback_received=66333 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=96270485 raw_packets=66338 raw_valid=66333 raw_invalid=5
+AT capture records=145 csv=configs\..\captures\session_20261007_154015\at_metrics.csv lte_csv=configs\..\captures\session_20261007_154015\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_154015\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_154015\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_154411 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=125775
+qwinlog raw init cfg_frame=20/82 bytes=715208
+qwinlog raw init cfg_frame=40/82 bytes=1680833
+qwinlog raw init cfg_frame=60/82 bytes=3614667
+qwinlog raw init cfg_frame=80/82 bytes=5613515
+qwinlog raw init cfg_frame=82/82 bytes=5826507
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=49982123 packets=42692 valid=42653 invalid=39
+capture stopped enqueued=42653 persisted=5165 dropped=0 raw_dir=configs\..\captures\session_20261007_154411 callback_calls=0 callback_received=42653 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=49982123 raw_packets=42692 raw_valid=42653 raw_invalid=39
+AT capture records=76 csv=configs\..\captures\session_20261007_154411\at_metrics.csv lte_csv=configs\..\captures\session_20261007_154411\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_154411\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_154411\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_154625 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=105162
+qwinlog raw init cfg_frame=20/82 bytes=636787
+qwinlog raw init cfg_frame=40/82 bytes=1444945
+qwinlog raw init cfg_frame=60/82 bytes=2968657
+qwinlog raw init cfg_frame=80/82 bytes=4688977
+qwinlog raw init cfg_frame=82/82 bytes=4869201
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=28546100 packets=24851 valid=24485 invalid=366
+capture stopped enqueued=24485 persisted=2900 dropped=0 raw_dir=configs\..\captures\session_20261007_154625 callback_calls=0 callback_received=24485 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=28546100 raw_packets=24851 raw_valid=24485 raw_invalid=366
+AT capture records=44 csv=configs\..\captures\session_20261007_154625\at_metrics.csv lte_csv=configs\..\captures\session_20261007_154625\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_154625\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_154625\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_154658 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=121052
+qwinlog raw init cfg_frame=20/82 bytes=644501
+qwinlog raw init cfg_frame=40/82 bytes=1601537
+qwinlog raw init cfg_frame=60/82 bytes=3239937
+qwinlog raw init cfg_frame=80/82 bytes=4943873
+qwinlog raw init cfg_frame=82/82 bytes=5091329
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=90860426 packets=76200 valid=76154 invalid=46
+capture stopped enqueued=76154 persisted=9077 dropped=0 raw_dir=configs\..\captures\session_20261007_154658 callback_calls=0 callback_received=76154 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=90860426 raw_packets=76200 raw_valid=76154 raw_invalid=46
+AT capture records=133 csv=configs\..\captures\session_20261007_154658\at_metrics.csv lte_csv=configs\..\captures\session_20261007_154658\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_154658\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_154658\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_160852 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=64741
+qwinlog raw init cfg_frame=20/82 bytes=769975
+qwinlog raw init cfg_frame=40/82 bytes=1939869
+qwinlog raw init cfg_frame=60/82 bytes=3889565
+qwinlog raw init cfg_frame=80/82 bytes=5937565
+qwinlog raw init cfg_frame=82/82 bytes=6134173
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=53449676 packets=42779 valid=42701 invalid=78
+capture stopped enqueued=42701 persisted=5032 dropped=0 raw_dir=configs\..\captures\session_20261007_160852 callback_calls=0 callback_received=42701 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=53449676 raw_packets=42779 raw_valid=42701 raw_invalid=78
+AT capture records=74 csv=configs\..\captures\session_20261007_160852\at_metrics.csv lte_csv=configs\..\captures\session_20261007_160852\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_160852\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_160852\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_161035 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=128485
+qwinlog raw init cfg_frame=20/82 bytes=709684
+qwinlog raw init cfg_frame=40/82 bytes=1722917
+qwinlog raw init cfg_frame=60/82 bytes=3492389
+qwinlog raw init cfg_frame=80/82 bytes=5253374
+qwinlog raw init cfg_frame=82/82 bytes=5417214
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=14916080 packets=11962 valid=11908 invalid=54
+capture stopped enqueued=11908 persisted=1715 dropped=0 raw_dir=configs\..\captures\session_20261007_161035 callback_calls=0 callback_received=11908 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=14916080 raw_packets=11962 raw_valid=11908 raw_invalid=54
+AT capture records=26 csv=configs\..\captures\session_20261007_161035\at_metrics.csv lte_csv=configs\..\captures\session_20261007_161035\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_161035\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_161035\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_161100 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=94754
+qwinlog raw init cfg_frame=20/82 bytes=1695579
+qwinlog raw init cfg_frame=40/82 bytes=3103494
+qwinlog raw init cfg_frame=60/82 bytes=4545286
+qwinlog raw init cfg_frame=80/82 bytes=5954310
+qwinlog raw init cfg_frame=82/82 bytes=6101766
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=34446086 packets=28701 valid=28577 invalid=124
+capture stopped enqueued=28577 persisted=1688 dropped=0 raw_dir=configs\..\captures\session_20261007_161100 callback_calls=0 callback_received=28577 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=34446086 raw_packets=28701 raw_valid=28577 raw_invalid=124
+AT capture records=53 csv=configs\..\captures\session_20261007_161100\at_metrics.csv lte_csv=configs\..\captures\session_20261007_161100\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_161100\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_161100\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_161141 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=94014
+qwinlog raw init cfg_frame=20/82 bytes=884912
+qwinlog raw init cfg_frame=40/82 bytes=1959242
+qwinlog raw init cfg_frame=60/82 bytes=3908938
+qwinlog raw init cfg_frame=80/82 bytes=5809482
+qwinlog raw init cfg_frame=82/82 bytes=5989706
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=10571463 packets=8418 valid=7768 invalid=650
+capture stopped enqueued=7768 persisted=1060 dropped=0 raw_dir=configs\..\captures\session_20261007_161141 callback_calls=0 callback_received=7768 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=10571463 raw_packets=8418 raw_valid=7768 raw_invalid=650
+AT capture records=17 csv=configs\..\captures\session_20261007_161141\at_metrics.csv lte_csv=configs\..\captures\session_20261007_161141\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_161141\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_161141\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_161340 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=104193
+qwinlog raw init cfg_frame=20/82 bytes=1697243
+qwinlog raw init cfg_frame=40/82 bytes=3320062
+qwinlog raw init cfg_frame=60/82 bytes=4811006
+qwinlog raw init cfg_frame=80/82 bytes=6105342
+qwinlog raw init cfg_frame=82/82 bytes=6220030
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=36727038 packets=31091 valid=31038 invalid=53
+capture stopped enqueued=31038 persisted=1954 dropped=0 raw_dir=configs\..\captures\session_20261007_161340 callback_calls=0 callback_received=31038 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=36727038 raw_packets=31091 raw_valid=31038 raw_invalid=53
+AT capture records=55 csv=configs\..\captures\session_20261007_161340\at_metrics.csv lte_csv=configs\..\captures\session_20261007_161340\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_161340\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_161340\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_171521 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=98120
+qwinlog raw init cfg_frame=20/82 bytes=958322
+qwinlog raw init cfg_frame=40/82 bytes=2165114
+qwinlog raw init cfg_frame=60/82 bytes=4131194
+qwinlog raw init cfg_frame=80/82 bytes=6113658
+qwinlog raw init cfg_frame=82/82 bytes=6293882
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=30946207 packets=24936 valid=24743 invalid=193
+capture stopped enqueued=24743 persisted=2269 dropped=0 raw_dir=configs\..\captures\session_20261007_171521 callback_calls=0 callback_received=24743 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=30946207 raw_packets=24936 raw_valid=24743 raw_invalid=193
+AT capture records=38 csv=configs\..\captures\session_20261007_171521\at_metrics.csv lte_csv=configs\..\captures\session_20261007_171521\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_171521\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_171521\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_171643 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=95736
+qwinlog raw init cfg_frame=20/82 bytes=1698004
+qwinlog raw init cfg_frame=40/82 bytes=3381052
+qwinlog raw init cfg_frame=60/82 bytes=4986684
+qwinlog raw init cfg_frame=80/82 bytes=6543164
+qwinlog raw init cfg_frame=82/82 bytes=6707004
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=35936060 packets=28261 valid=28154 invalid=107
+capture stopped enqueued=28154 persisted=1848 dropped=0 raw_dir=configs\..\captures\session_20261007_171643 callback_calls=0 callback_received=28154 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=35936060 raw_packets=28261 raw_valid=28154 raw_invalid=107
+AT capture records=56 csv=configs\..\captures\session_20261007_171643\at_metrics.csv lte_csv=configs\..\captures\session_20261007_171643\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_171643\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_171643\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_171907 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=81583
+qwinlog raw init cfg_frame=20/82 bytes=1070987
+qwinlog raw init cfg_frame=40/82 bytes=2292935
+qwinlog raw init cfg_frame=60/82 bytes=4193479
+qwinlog raw init cfg_frame=80/82 bytes=6208711
+qwinlog raw init cfg_frame=82/82 bytes=6421703
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=7634119 packets=5476 valid=5371 invalid=105
+capture stopped enqueued=5371 persisted=632 dropped=0 raw_dir=configs\..\captures\session_20261007_171907 callback_calls=0 callback_received=5371 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=7634119 raw_packets=5476 raw_valid=5371 raw_invalid=105
+AT capture records=13 csv=configs\..\captures\session_20261007_171907\at_metrics.csv lte_csv=configs\..\captures\session_20261007_171907\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_171907\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_171907\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_172501 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=81767
+qwinlog raw init cfg_frame=20/82 bytes=1272646
+qwinlog raw init cfg_frame=40/82 bytes=2828278
+qwinlog raw init cfg_frame=60/82 bytes=4728822
+qwinlog raw init cfg_frame=80/82 bytes=6498294
+qwinlog raw init cfg_frame=82/82 bytes=6711286
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=7301110 packets=5124 valid=4877 invalid=247
+capture stopped enqueued=4877 persisted=775 dropped=0 raw_dir=configs\..\captures\session_20261007_172501 callback_calls=0 callback_received=4877 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=7301110 raw_packets=5124 raw_valid=4877 raw_invalid=247
+AT capture records=12 csv=configs\..\captures\session_20261007_172501\at_metrics.csv lte_csv=configs\..\captures\session_20261007_172501\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_172501\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_172501\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_175732 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=76746
+qwinlog raw init cfg_frame=20/82 bytes=1058556
+qwinlog raw init cfg_frame=40/82 bytes=2244588
+qwinlog raw init cfg_frame=60/82 bytes=4325356
+qwinlog raw init cfg_frame=80/82 bytes=6438892
+qwinlog raw init cfg_frame=82/82 bytes=6619116
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=13680620 packets=12432 valid=12006 invalid=426
+capture stopped enqueued=12006 persisted=943 dropped=0 raw_dir=configs\..\captures\session_20261007_175732 callback_calls=0 callback_received=12006 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=13680620 raw_packets=12432 raw_valid=12006 raw_invalid=426
+AT capture records=18 csv=configs\..\captures\session_20261007_175732\at_metrics.csv lte_csv=configs\..\captures\session_20261007_175732\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_175732\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_175732\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_175808 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=95395
+qwinlog raw init cfg_frame=20/82 bytes=1453102
+qwinlog raw init cfg_frame=40/82 bytes=2444969
+qwinlog raw init cfg_frame=60/82 bytes=4066985
+qwinlog raw init cfg_frame=80/82 bytes=5951145
+qwinlog raw init cfg_frame=82/82 bytes=6147753
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=26001821 packets=23159 valid=23009 invalid=150
+capture stopped enqueued=23009 persisted=1865 dropped=0 raw_dir=configs\..\captures\session_20261007_175808 callback_calls=0 callback_received=23009 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=26001821 raw_packets=23159 raw_valid=23009 raw_invalid=150
+AT capture records=31 csv=configs\..\captures\session_20261007_175808\at_metrics.csv lte_csv=configs\..\captures\session_20261007_175808\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_175808\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_175808\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_180139 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=95888
+qwinlog raw init cfg_frame=20/82 bytes=1150340
+qwinlog raw init cfg_frame=40/82 bytes=2761752
+qwinlog raw init cfg_frame=60/82 bytes=4629528
+qwinlog raw init cfg_frame=80/82 bytes=6595608
+qwinlog raw init cfg_frame=82/82 bytes=6775832
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=10806296 packets=8857 valid=8618 invalid=239
+capture stopped enqueued=8618 persisted=702 dropped=0 raw_dir=configs\..\captures\session_20261007_180139 callback_calls=0 callback_received=8618 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=10806296 raw_packets=8857 raw_valid=8618 raw_invalid=239
+AT capture records=15 csv=configs\..\captures\session_20261007_180139\at_metrics.csv lte_csv=configs\..\captures\session_20261007_180139\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_180139\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_180139\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_180231 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=81526
+qwinlog raw init cfg_frame=20/82 bytes=1784144
+qwinlog raw init cfg_frame=40/82 bytes=3389776
+qwinlog raw init cfg_frame=60/82 bytes=5011792
+qwinlog raw init cfg_frame=80/82 bytes=6519120
+qwinlog raw init cfg_frame=82/82 bytes=6682960
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=20035920 packets=15157 valid=14901 invalid=256
+capture stopped enqueued=14901 persisted=1268 dropped=0 raw_dir=configs\..\captures\session_20261007_180231 callback_calls=0 callback_received=14901 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=20035920 raw_packets=15157 raw_valid=14901 raw_invalid=256
+AT capture records=30 csv=configs\..\captures\session_20261007_180231\at_metrics.csv lte_csv=configs\..\captures\session_20261007_180231\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_180231\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_180231\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_180441 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=81004
+qwinlog raw init cfg_frame=20/82 bytes=2004205
+qwinlog raw init cfg_frame=40/82 bytes=3822829
+qwinlog raw init cfg_frame=60/82 bytes=5657837
+qwinlog raw init cfg_frame=80/82 bytes=7410925
+qwinlog raw init cfg_frame=82/82 bytes=7591149
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=20583661 packets=16352 valid=16255 invalid=97
+capture stopped enqueued=16255 persisted=1323 dropped=0 raw_dir=configs\..\captures\session_20261007_180441 callback_calls=0 callback_received=16255 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=20583661 raw_packets=16352 raw_valid=16255 raw_invalid=97
+AT capture records=25 csv=configs\..\captures\session_20261007_180441\at_metrics.csv lte_csv=configs\..\captures\session_20261007_180441\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_180441\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_180441\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_181130 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=81000
+qwinlog raw init cfg_frame=20/82 bytes=1293198
+qwinlog raw init cfg_frame=40/82 bytes=2479665
+qwinlog raw init cfg_frame=60/82 bytes=4412977
+qwinlog raw init cfg_frame=80/82 bytes=6149681
+qwinlog raw init cfg_frame=82/82 bytes=6329905
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=13784625 packets=11404 valid=11331 invalid=73
+capture stopped enqueued=11331 persisted=929 dropped=0 raw_dir=configs\..\captures\session_20261007_181130 callback_calls=0 callback_received=11331 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=13784625 raw_packets=11404 raw_valid=11331 raw_invalid=73
+AT capture records=18 csv=configs\..\captures\session_20261007_181130\at_metrics.csv lte_csv=configs\..\captures\session_20261007_181130\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_181130\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_181130\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261007_181205 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=111114
+qwinlog raw init cfg_frame=20/82 bytes=1184786
+qwinlog raw init cfg_frame=40/82 bytes=2566084
+qwinlog raw init cfg_frame=60/82 bytes=4335556
+qwinlog raw init cfg_frame=80/82 bytes=6088644
+qwinlog raw init cfg_frame=82/82 bytes=6268868
+stopping capture
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+qwinlog raw capture stopped bytes=6268868 packets=3478 valid=3478 invalid=0
+capture stopped enqueued=3478 persisted=479 dropped=0 raw_dir=configs\..\captures\session_20261007_181205 callback_calls=0 callback_received=3478 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=6268868 raw_packets=3478 raw_valid=3478 raw_invalid=0
+AT capture records=12 csv=configs\..\captures\session_20261007_181205\at_metrics.csv lte_csv=configs\..\captures\session_20261007_181205\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261007_181205\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261007_181205\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_115541 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=12
+qwinlog raw init cfg_frame=20/82 bytes=790
+qwinlog raw init cfg_frame=40/82 bytes=902059
+qwinlog raw init cfg_frame=60/82 bytes=2786219
+qwinlog raw init cfg_frame=80/82 bytes=4105709
+qwinlog raw init cfg_frame=82/82 bytes=4302317
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=9290301 packets=9158 valid=8995 invalid=163
+capture stopped enqueued=8995 persisted=711 dropped=0 raw_dir=configs\..\captures\session_20261008_115541 callback_calls=0 callback_received=8995 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=9290301 raw_packets=9158 raw_valid=8995 raw_invalid=163
+AT capture records=17 csv=configs\..\captures\session_20261008_115541\at_metrics.csv lte_csv=configs\..\captures\session_20261008_115541\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_115541\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_115541\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_115644 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=93958
+qwinlog raw init cfg_frame=20/82 bytes=1894605
+qwinlog raw init cfg_frame=40/82 bytes=3618039
+qwinlog raw init cfg_frame=60/82 bytes=5158135
+qwinlog raw init cfg_frame=80/82 bytes=6763767
+qwinlog raw init cfg_frame=82/82 bytes=6943991
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=62878967 packets=51831 valid=51789 invalid=42
+capture stopped enqueued=51789 persisted=3205 dropped=0 raw_dir=configs\..\captures\session_20261008_115644 callback_calls=0 callback_received=51789 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=62878967 raw_packets=51831 raw_valid=51789 raw_invalid=42
+AT capture records=92 csv=configs\..\captures\session_20261008_115644\at_metrics.csv lte_csv=configs\..\captures\session_20261008_115644\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_115644\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_115644\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_115917 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=61647
+qwinlog raw init cfg_frame=20/82 bytes=2044111
+qwinlog raw init cfg_frame=40/82 bytes=3614694
+qwinlog raw init cfg_frame=60/82 bytes=5269478
+qwinlog raw init cfg_frame=80/82 bytes=6875110
+qwinlog raw init cfg_frame=82/82 bytes=7006182
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=101984230 packets=85845 valid=85719 invalid=126
+capture stopped enqueued=85719 persisted=5019 dropped=0 raw_dir=configs\..\captures\session_20261008_115917 callback_calls=0 callback_received=85719 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=101984230 raw_packets=85845 raw_valid=85719 raw_invalid=126
+AT capture records=146 csv=configs\..\captures\session_20261008_115917\at_metrics.csv lte_csv=configs\..\captures\session_20261008_115917\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_115917\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_115917\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_143144 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=12
+qwinlog raw init cfg_frame=20/82 bytes=790
+qwinlog raw init cfg_frame=40/82 bytes=722696
+qwinlog raw init cfg_frame=60/82 bytes=2344712
+qwinlog raw init cfg_frame=80/82 bytes=3516449
+qwinlog raw init cfg_frame=82/82 bytes=3647521
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=469743206 packets=407578 valid=407367 invalid=211
+capture stopped enqueued=407367 persisted=35643 dropped=0 raw_dir=configs\..\captures\session_20261008_143144 callback_calls=0 callback_received=407367 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=469743206 raw_packets=407578 raw_valid=407367 raw_invalid=211
+AT capture records=542 csv=configs\..\captures\session_20261008_143144\at_metrics.csv lte_csv=configs\..\captures\session_20261008_143144\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_143144\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_143144\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_143801 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=65205
+qwinlog raw init cfg_frame=20/82 bytes=1582675
+qwinlog raw init cfg_frame=40/82 bytes=3241912
+qwinlog raw init cfg_frame=60/82 bytes=5289912
+qwinlog raw init cfg_frame=80/82 bytes=7387064
+qwinlog raw init cfg_frame=82/82 bytes=7600056
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=335050680 packets=322399 valid=322298 invalid=101
+capture stopped enqueued=322298 persisted=18998 dropped=0 raw_dir=configs\..\captures\session_20261008_143801 callback_calls=0 callback_received=322298 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=335050680 raw_packets=322399 raw_valid=322298 raw_invalid=101
+AT capture records=311 csv=configs\..\captures\session_20261008_143801\at_metrics.csv lte_csv=configs\..\captures\session_20261008_143801\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_143801\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_143801\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_144622 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=97243
+qwinlog raw init cfg_frame=20/82 bytes=1728777
+qwinlog raw init cfg_frame=40/82 bytes=3393559
+qwinlog raw init cfg_frame=60/82 bytes=5228567
+qwinlog raw init cfg_frame=80/82 bytes=6998039
+qwinlog raw init cfg_frame=82/82 bytes=7178263
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=12830743 packets=10439 valid=10373 invalid=66
+capture stopped enqueued=10373 persisted=962 dropped=0 raw_dir=configs\..\captures\session_20261008_144622 callback_calls=0 callback_received=10373 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=12830743 raw_packets=10439 raw_valid=10373 raw_invalid=66
+AT capture records=17 csv=configs\..\captures\session_20261008_144622\at_metrics.csv lte_csv=configs\..\captures\session_20261008_144622\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_144622\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_144622\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_145758 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=57201
+qwinlog raw init cfg_frame=20/82 bytes=2008975
+qwinlog raw init cfg_frame=40/82 bytes=3974170
+qwinlog raw init cfg_frame=60/82 bytes=5612570
+qwinlog raw init cfg_frame=80/82 bytes=7431194
+qwinlog raw init cfg_frame=82/82 bytes=7611418
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=25224218 packets=16245 valid=16159 invalid=86
+capture stopped enqueued=16159 persisted=1723 dropped=0 raw_dir=configs\..\captures\session_20261008_145758 callback_calls=0 callback_received=16159 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=25224218 raw_packets=16245 raw_valid=16159 raw_invalid=86
+AT capture records=29 csv=configs\..\captures\session_20261008_145758\at_metrics.csv lte_csv=configs\..\captures\session_20261008_145758\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_145758\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_145758\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_145849 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=64026
+qwinlog raw init cfg_frame=20/82 bytes=1871998
+qwinlog raw init cfg_frame=40/82 bytes=3754302
+qwinlog raw init cfg_frame=60/82 bytes=5556542
+qwinlog raw init cfg_frame=80/82 bytes=7424318
+qwinlog raw init cfg_frame=82/82 bytes=7571774
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=337447230 packets=276221 valid=276117 invalid=104
+capture stopped enqueued=276117 persisted=18369 dropped=0 raw_dir=configs\..\captures\session_20261008_145849 callback_calls=0 callback_received=276117 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=337447230 raw_packets=276221 raw_valid=276117 raw_invalid=104
+AT capture records=492 csv=configs\..\captures\session_20261008_145849\at_metrics.csv lte_csv=configs\..\captures\session_20261008_145849\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_145849\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_145849\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_150427 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=0
+qwinlog raw init cfg_frame=20/82 bytes=0
+qwinlog raw init cfg_frame=40/82 bytes=0
+qwinlog raw init cfg_frame=60/82 bytes=0
+qwinlog raw init cfg_frame=80/82 bytes=0
+qwinlog raw init cfg_frame=82/82 bytes=0
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+no DM data detected; recovery attempt=1
+no DM data detected; recovery attempt=2
+no DM data detected; recovery attempt=3
+no DM data: maximum reconnect attempts reached (3)
+stopping capture
+qwinlog raw capture stopped bytes=0 packets=0 valid=0 invalid=0
+capture stopped enqueued=0 persisted=0 dropped=0 raw_dir=configs\..\captures\session_20261008_150427 callback_calls=0 callback_received=0 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=0 raw_packets=0 raw_valid=0 raw_invalid=0
+AT capture records=388 csv=configs\..\captures\session_20261008_150427\at_metrics.csv lte_csv=configs\..\captures\session_20261008_150427\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_150427\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_150427\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_152900 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=12
+qwinlog raw init cfg_frame=20/82 bytes=790
+qwinlog raw init cfg_frame=40/82 bytes=884923
+qwinlog raw init cfg_frame=60/82 bytes=2851003
+qwinlog raw init cfg_frame=80/82 bytes=4997307
+qwinlog raw init cfg_frame=82/82 bytes=5210299
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=303333563 packets=285643 valid=285546 invalid=97
+capture stopped enqueued=285546 persisted=17055 dropped=0 raw_dir=configs\..\captures\session_20261008_152900 callback_calls=0 callback_received=285546 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=303333563 raw_packets=285643 raw_valid=285546 raw_invalid=97
+AT capture records=335 csv=configs\..\captures\session_20261008_152900\at_metrics.csv lte_csv=configs\..\captures\session_20261008_152900\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_152900\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_152900\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_155643 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=65081
+qwinlog raw init cfg_frame=20/82 bytes=722179
+qwinlog raw init cfg_frame=40/82 bytes=2128007
+qwinlog raw init cfg_frame=60/82 bytes=3251490
+qwinlog raw init cfg_frame=80/82 bytes=4767568
+qwinlog raw init cfg_frame=82/82 bytes=4898640
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=134775482 packets=120073 valid=120029 invalid=44
+capture stopped enqueued=120029 persisted=10086 dropped=0 raw_dir=configs\..\captures\session_20261008_155643 callback_calls=0 callback_received=120029 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=134775482 raw_packets=120073 raw_valid=120029 raw_invalid=44
+AT capture records=183 csv=configs\..\captures\session_20261008_155643\at_metrics.csv lte_csv=configs\..\captures\session_20261008_155643\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_155643\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_155643\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_160327 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=61943
+qwinlog raw init cfg_frame=20/82 bytes=443040
+qwinlog raw init cfg_frame=40/82 bytes=803505
+qwinlog raw init cfg_frame=60/82 bytes=1217656
+qwinlog raw init cfg_frame=80/82 bytes=1563617
+qwinlog raw init cfg_frame=82/82 bytes=1673099
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=6588649 packets=925 valid=925 invalid=0
+capture stopped enqueued=925 persisted=925 dropped=0 raw_dir=configs\..\captures\session_20261008_160327 callback_calls=0 callback_received=925 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=6588649 raw_packets=925 raw_valid=925 raw_invalid=0
+AT capture records=40 csv=configs\..\captures\session_20261008_160327\at_metrics.csv lte_csv=configs\..\captures\session_20261008_160327\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_160327\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_160327\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_171246 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=12
+qwinlog raw init cfg_frame=20/82 bytes=790
+qwinlog raw init cfg_frame=40/82 bytes=704830
+qwinlog raw init cfg_frame=60/82 bytes=2375998
+qwinlog raw init cfg_frame=80/82 bytes=4096318
+qwinlog raw init cfg_frame=82/82 bytes=4260158
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=419561790 packets=352673 valid=352344 invalid=329
+capture stopped enqueued=352344 persisted=20608 dropped=0 raw_dir=configs\..\captures\session_20261008_171246 callback_calls=0 callback_received=352344 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=419561790 raw_packets=352673 raw_valid=352344 raw_invalid=329
+AT capture records=595 csv=configs\..\captures\session_20261008_171246\at_metrics.csv lte_csv=configs\..\captures\session_20261008_171246\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_171246\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_171246\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261008_171944 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=79475
+qwinlog raw init cfg_frame=20/82 bytes=2094707
+qwinlog raw init cfg_frame=40/82 bytes=3569267
+qwinlog raw init cfg_frame=60/82 bytes=4978291
+qwinlog raw init cfg_frame=80/82 bytes=6747763
+qwinlog raw init cfg_frame=82/82 bytes=6927987
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=239367795 packets=206045 valid=205960 invalid=85
+capture stopped enqueued=205960 persisted=12027 dropped=0 raw_dir=configs\..\captures\session_20261008_171944 callback_calls=0 callback_received=205960 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=239367795 raw_packets=206045 raw_valid=205960 raw_invalid=85
+AT capture records=353 csv=configs\..\captures\session_20261008_171944\at_metrics.csv lte_csv=configs\..\captures\session_20261008_171944\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261008_171944\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261008_171944\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261023_143455 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=12
+qwinlog raw init cfg_frame=20/82 bytes=790
+qwinlog raw init cfg_frame=40/82 bytes=963574
+qwinlog raw init cfg_frame=60/82 bytes=2618358
+qwinlog raw init cfg_frame=80/82 bytes=4240374
+qwinlog raw init cfg_frame=82/82 bytes=4371446
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261023_143823 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=63655
+qwinlog raw init cfg_frame=20/82 bytes=1351721
+qwinlog raw init cfg_frame=40/82 bytes=2690917
+qwinlog raw init cfg_frame=60/82 bytes=3772015
+qwinlog raw init cfg_frame=80/82 bytes=5085998
+qwinlog raw init cfg_frame=82/82 bytes=5212747
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=40815554 packets=29021 valid=28983 invalid=38
+capture stopped enqueued=28983 persisted=7558 dropped=0 raw_dir=configs\..\captures\session_20261023_143823 callback_calls=0 callback_received=28983 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=40815554 raw_packets=29021 raw_valid=28983 raw_invalid=38
+AT capture records=96 csv=configs\..\captures\session_20261023_143823\at_metrics.csv lte_csv=configs\..\captures\session_20261023_143823\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261023_143823\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261023_143823\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261023_143934 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=65191
+qwinlog raw init cfg_frame=20/82 bytes=1833829
+qwinlog raw init cfg_frame=40/82 bytes=3652453
+qwinlog raw init cfg_frame=60/82 bytes=5192549
+qwinlog raw init cfg_frame=80/82 bytes=6880101
+qwinlog raw init cfg_frame=82/82 bytes=7027557
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=107117413 packets=91798 valid=91704 invalid=94
+capture stopped enqueued=91704 persisted=5419 dropped=0 raw_dir=configs\..\captures\session_20261023_143934 callback_calls=0 callback_received=91704 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=107117413 raw_packets=91798 raw_valid=91704 raw_invalid=94
+AT capture records=155 csv=configs\..\captures\session_20261023_143934\at_metrics.csv lte_csv=configs\..\captures\session_20261023_143934\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261023_143934\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261023_143934\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261023_144403 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=65419
+qwinlog raw init cfg_frame=20/82 bytes=1786901
+qwinlog raw init cfg_frame=40/82 bytes=3284231
+qwinlog raw init cfg_frame=60/82 bytes=4627719
+qwinlog raw init cfg_frame=80/82 bytes=6102279
+qwinlog raw init cfg_frame=82/82 bytes=6249735
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=65297671 packets=55874 valid=55772 invalid=102
+capture stopped enqueued=55772 persisted=3568 dropped=0 raw_dir=configs\..\captures\session_20261023_144403 callback_calls=0 callback_received=55772 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=65297671 raw_packets=55874 raw_valid=55772 raw_invalid=102
+AT capture records=98 csv=configs\..\captures\session_20261023_144403\at_metrics.csv lte_csv=configs\..\captures\session_20261023_144403\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261023_144403\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261023_144403\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261023_144637 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=81467
+qwinlog raw init cfg_frame=20/82 bytes=1887530
+qwinlog raw init cfg_frame=40/82 bytes=3522609
+qwinlog raw init cfg_frame=60/82 bytes=5259313
+qwinlog raw init cfg_frame=80/82 bytes=6897713
+qwinlog raw init cfg_frame=82/82 bytes=7094321
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=86409265 packets=73606 valid=73531 invalid=75
+capture stopped enqueued=73531 persisted=4620 dropped=0 raw_dir=configs\..\captures\session_20261023_144637 callback_calls=0 callback_received=73531 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=86409265 raw_packets=73606 raw_valid=73531 raw_invalid=75
+AT capture records=123 csv=configs\..\captures\session_20261023_144637\at_metrics.csv lte_csv=configs\..\captures\session_20261023_144637\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261023_144637\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261023_144637\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261023_144959 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=78051
+qwinlog raw init cfg_frame=20/82 bytes=1994979
+qwinlog raw init cfg_frame=40/82 bytes=3824704
+qwinlog raw init cfg_frame=60/82 bytes=5364800
+qwinlog raw init cfg_frame=80/82 bytes=7101504
+qwinlog raw init cfg_frame=82/82 bytes=7281728
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=89119808 packets=76899 valid=76833 invalid=66
+capture stopped enqueued=76833 persisted=4691 dropped=0 raw_dir=configs\..\captures\session_20261023_144959 callback_calls=0 callback_received=76833 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=89119808 raw_packets=76899 raw_valid=76833 raw_invalid=66
+AT capture records=130 csv=configs\..\captures\session_20261023_144959\at_metrics.csv lte_csv=configs\..\captures\session_20261023_144959\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261023_144959\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261023_144959\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261024_201828 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=12
+qwinlog raw init cfg_frame=20/82 bytes=790
+qwinlog raw init cfg_frame=40/82 bytes=115577
+qwinlog raw init cfg_frame=60/82 bytes=240979
+qwinlog raw init cfg_frame=80/82 bytes=380200
+qwinlog raw init cfg_frame=82/82 bytes=396600
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=1406914 packets=356 valid=356 invalid=0
+capture stopped enqueued=356 persisted=356 dropped=0 raw_dir=configs\..\captures\session_20261024_201828 callback_calls=0 callback_received=356 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=1406914 raw_packets=356 raw_valid=356 raw_invalid=0
+AT capture records=16 csv=configs\..\captures\session_20261024_201828\at_metrics.csv lte_csv=configs\..\captures\session_20261024_201828\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261024_201828\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261024_201828\merged_metrics.csv
+PUSCH BLER worker ready dll=DDLCXX01.dll config_id=2 object=0x139F field=0x139F0005
+configured raw_dm_port trace=3 baud=115200
+raw DM reader started port=3 connect_rc=0 rc_hex=0x00000000
+capturing session=session_20261024_201928 connect_rc=0; press Ctrl+C to stop
+qwinlog raw init cfg_frame=1/82 bytes=94821
+qwinlog raw init cfg_frame=20/82 bytes=400808
+qwinlog raw init cfg_frame=40/82 bytes=755583
+qwinlog raw init cfg_frame=60/82 bytes=1173860
+qwinlog raw init cfg_frame=80/82 bytes=1599844
+qwinlog raw init cfg_frame=82/82 bytes=1599979
+qwinlog raw capture started port=3 config=configs\..\Qwinlog\conf\qual\5GNR_LTE_CN_V9.cfg frames=82
+stopping capture
+qwinlog raw capture stopped bytes=5702987 packets=841 valid=841 invalid=0
+capture stopped enqueued=841 persisted=841 dropped=0 raw_dir=configs\..\captures\session_20261024_201928 callback_calls=0 callback_received=841 callback_invalid=0 callback_empty=0 callback_oversize=0 callback_dropped=0 dm_source=qwinlog_raw raw_bytes=5702987 raw_packets=841 raw_valid=841 raw_invalid=0
+AT capture records=35 csv=configs\..\captures\session_20261024_201928\at_metrics.csv lte_csv=configs\..\captures\session_20261024_201928\4G_metrics.csv
+DM metrics csv=configs\..\captures\session_20261024_201928\dm_metrics.csv
+merged metrics csv=configs\..\captures\session_20261024_201928\merged_metrics.csv

@@ -1,0 +1,21 @@
+{
+  "CmdList":[
+    {
+      "Type": "MoveClick",
+      "X": 150,
+      "Y": 150
+    },
+    {
+      "Type": "KeyInput",
+      "InputStr": "zLwbTu8S5WSgCVgQ"
+    },
+    {
+      "Type": "Move",
+      "X": 150,
+      "Y": 200
+    },
+    {
+      "Type": "ScrollDown"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>AuthLogin</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net40</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="86sZ9krybodfk6KB2L.SSShrc7ePDHUPpwx3w" />
+    <None Remove="Kf2APA4QcexMOmhFgu.vOIc2dhia3H5QP6jHV" />
+    <None Remove="uABIvVkBTCW6YqxfjP.vtVCi2BmDXA01GwBNX" />
+    <None Remove="xF9b8m2dcH2khISuwo.Jn7V1XXSx1KXdtg1w9" />
+    <None Remove="tyRQmYYcQ2QJuSXuin.FVpx5HM00WWunKPb3V" />
+    <EmbeddedResource Include="86sZ9krybodfk6KB2L.SSShrc7ePDHUPpwx3w" LogicalName="86sZ9krybodfk6KB2L.SSShrc7ePDHUPpwx3w" />
+    <EmbeddedResource Include="Kf2APA4QcexMOmhFgu.vOIc2dhia3H5QP6jHV" LogicalName="Kf2APA4QcexMOmhFgu.vOIc2dhia3H5QP6jHV" />
+    <EmbeddedResource Include="uABIvVkBTCW6YqxfjP.vtVCi2BmDXA01GwBNX" LogicalName="uABIvVkBTCW6YqxfjP.vtVCi2BmDXA01GwBNX" />
+    <EmbeddedResource Include="xF9b8m2dcH2khISuwo.Jn7V1XXSx1KXdtg1w9" LogicalName="xF9b8m2dcH2khISuwo.Jn7V1XXSx1KXdtg1w9" />
+    <EmbeddedResource Include="tyRQmYYcQ2QJuSXuin.FVpx5HM00WWunKPb3V" LogicalName="tyRQmYYcQ2QJuSXuin.FVpx5HM00WWunKPb3V" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Management" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>autocom_extracted/Bin/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>../../../../../../../../../usr/lib/dotnet/shared/Microsoft.NETCore.App/8.0.28/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>../../../../../../../../../usr/lib/dotnet/shared/Microsoft.NETCore.App/8.0.28/System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

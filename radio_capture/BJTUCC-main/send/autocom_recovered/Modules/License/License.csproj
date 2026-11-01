@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>License</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net40</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="JHjSywoYmQI1i3FjC4.rCWywxkIkCgbeo21WP" />
+    <None Remove="6xlR887SEMfkji3tyP.5owkbrPojTPd9ag8bo" />
+    <None Remove="ATCMuwJhI6a2d2vRnR.X0e2rh3U5EhquSgk1m" />
+    <None Remove="KanpEaO3p81wOj7ZZx.iF0YvPZZC6jNMjJkZl" />
+    <None Remove="rRPiGfvW56fjXEqhgD.orMrnSgAxjWDwYU6rB" />
+    <EmbeddedResource Include="JHjSywoYmQI1i3FjC4.rCWywxkIkCgbeo21WP" LogicalName="JHjSywoYmQI1i3FjC4.rCWywxkIkCgbeo21WP" />
+    <EmbeddedResource Include="6xlR887SEMfkji3tyP.5owkbrPojTPd9ag8bo" LogicalName="6xlR887SEMfkji3tyP.5owkbrPojTPd9ag8bo" />
+    <EmbeddedResource Include="ATCMuwJhI6a2d2vRnR.X0e2rh3U5EhquSgk1m" LogicalName="ATCMuwJhI6a2d2vRnR.X0e2rh3U5EhquSgk1m" />
+    <EmbeddedResource Include="KanpEaO3p81wOj7ZZx.iF0YvPZZC6jNMjJkZl" LogicalName="KanpEaO3p81wOj7ZZx.iF0YvPZZC6jNMjJkZl" />
+    <EmbeddedResource Include="rRPiGfvW56fjXEqhgD.orMrnSgAxjWDwYU6rB" LogicalName="rRPiGfvW56fjXEqhgD.orMrnSgAxjWDwYU6rB" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Aliyun.OSS">
+      <HintPath>../../../autocom_extracted/Bin/Aliyun.OSS.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>../../../autocom_extracted/Bin/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

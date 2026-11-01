@@ -1,0 +1,4 @@
+[ver]
+BUILT_DATE = 20241220
+BASE_VER = 5.1.770.241220
+Change-Id=

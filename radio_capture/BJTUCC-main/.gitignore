@@ -1,0 +1,41 @@
+# Python environments and generated files
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local configuration and capture output
+configs/config.json
+configs/data/
+data/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.qmdl
+*.dtlog
+
+# Keep other vendor DLLs out; bundle only the runtime files used by this project
+*.dll
+vendor_runtime/*
+!vendor_runtime/Bin/
+vendor_runtime/Bin/*
+!vendor_runtime/Bin/DDDCXX01.dll
+!vendor_runtime/Bin/DDDIXX00.dll
+!vendor_runtime/Bin/DDDIXXS0.dll
+!vendor_runtime/Bin/DDLCXX01.dll
+!vendor_runtime/Bin/msvcp120.dll
+!vendor_runtime/Bin/msvcr120.dll
+!vendor_runtime/Bin/msvcp140.dll
+!vendor_runtime/Bin/vcruntime140.dll
+
+# Local editor/agent settings
+.vscode/
+.agents/
+.codex/

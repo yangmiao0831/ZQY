@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IoV Data Collector (UE-Stack)</title>
+    <meta name="description" content="Professional field collection system for IoV communication diagnostics, featuring full-stack signal monitoring, active measurement, and GNSS tracing." />
+    <meta property="og:title" content="IoV Data Collector (UE-Stack)" />
+    <meta property="og:description" content="Professional field collection system for IoV communication diagnostics, featuring full-stack signal monitoring, active measurement, and GNSS tracing." />
+    <script>
+      // Global error shield to prevent cross-origin third-party script errors from crashing the app
+      window.addEventListener('error', function(event) {
+        if (event.message === 'Script error.' || !event.filename || event.filename.indexOf('amap.com') !== -1) {
+          event.preventDefault && event.preventDefault();
+          event.stopPropagation && event.stopPropagation();
+          console.warn('[Global Error Handler] Caught external script error:', event);
+          return true;
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(event) {
+        console.warn('[Global Rejection Handler] Caught unhandled rejection:', event.reason);
+        event.preventDefault && event.preventDefault();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

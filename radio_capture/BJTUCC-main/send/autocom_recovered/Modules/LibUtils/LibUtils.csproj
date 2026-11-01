@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>LibUtils</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net40</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="YjNVCB9FAVfFw5y2eL.eUu4KjJjnSUI33a67n" />
+    <None Remove="M33SUhOJbjOeyym4od.Cwfw48kDOqmv4MepUG" />
+    <None Remove="ByVoKWwWWInwu62blZ.OTsYUydZNRYngEHK3I" />
+    <None Remove="KX2XmCn7vf1pBrNQQA.tG32uKHFVowMD2KYub" />
+    <None Remove="x09C6LKEp23P7EwfOO.FGJTu74XucGCOphZCK" />
+    <EmbeddedResource Include="YjNVCB9FAVfFw5y2eL.eUu4KjJjnSUI33a67n" LogicalName="YjNVCB9FAVfFw5y2eL.eUu4KjJjnSUI33a67n" />
+    <EmbeddedResource Include="M33SUhOJbjOeyym4od.Cwfw48kDOqmv4MepUG" LogicalName="M33SUhOJbjOeyym4od.Cwfw48kDOqmv4MepUG" />
+    <EmbeddedResource Include="ByVoKWwWWInwu62blZ.OTsYUydZNRYngEHK3I" LogicalName="ByVoKWwWWInwu62blZ.OTsYUydZNRYngEHK3I" />
+    <EmbeddedResource Include="KX2XmCn7vf1pBrNQQA.tG32uKHFVowMD2KYub" LogicalName="KX2XmCn7vf1pBrNQQA.tG32uKHFVowMD2KYub" />
+    <EmbeddedResource Include="x09C6LKEp23P7EwfOO.FGJTu74XucGCOphZCK" LogicalName="x09C6LKEp23P7EwfOO.FGJTu74XucGCOphZCK" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>../../../autocom_extracted/Bin/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Base">
+      <HintPath>../../../autocom_extracted/Bin/Microsoft.Office.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>../../../autocom_extracted/Bin/ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="DevExpress.XtraEditors.v13.1">
+      <HintPath>../../../autocom_extracted/Bin/DevExpress.XtraEditors.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.1">
+      <HintPath>../../../autocom_extracted/Bin/DevExpress.XtraBars.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.1">
+      <HintPath>../../../autocom_extracted/Bin/DevExpress.Utils.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>../../../autocom_extracted/Bin/System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+    </Reference>
+    <Reference Include="zlib.net">
+      <HintPath>../../../autocom_extracted/Bin/zlib.net.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v13.1">
+      <HintPath>../../../autocom_extracted/Bin/DevExpress.XtraTreeList.v13.1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

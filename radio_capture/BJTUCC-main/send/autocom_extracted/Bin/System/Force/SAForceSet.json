@@ -1,0 +1,38 @@
+{
+	"HUAWEI Mate 30 Pro 5G": {
+		"Cmd": "am force-stop com.android.settings@am start com.android.settings@input swipe 800 2000 20 20@input tap 836 2110@input tap 710 1600@input swipe 800 2000 20 200@input tap 420 820@input tap 420 1800@input tap 420 1940@input tap 420 2100",
+		"Timeout": "500@500@1000@1000@1500@3000@2000"
+	},
+	"HUAWEI Mate 30 5G": {
+		"Cmd": "am force-stop com.android.settings@am start com.android.settings@input swipe 800 2000 20 20@input tap 836 2110@input tap 710 1580@input swipe 800 2000 20 200@input tap 420 820@input tap 420 1750@input tap 420 1890@input tap 420 2030",
+		"Timeout": "500@500@1000@1000@150032000@2000"
+	},
+	"HUAWEI Mate 20 X (5G)": {
+		"Cmd": "am force-stop com.android.settings@am start com.android.settings@input swipe 800 2000 20 20@input tap 836 1960@input tap 710 1600@input swipe 800 2000 20 200@input tap 420 880@input tap 420 1650@input tap 420 1810@input tap 420 1950",
+		"Timeout": "500@500@1000@1000@1500@3000@2000"
+	},
+	"HUAWEI P40 Pro": {
+		"Cmd": "am force-stop com.android.settings@am start com.android.settings@input swipe 800 2000 20 20@input tap 670 2340@input tap 690 1830@input swipe 800 2000 20 200@input tap 550 1550@input tap 560 2000@input tap 560 2150@input tap 560 2320",
+		"Timeout": "500@1000@2000@1500@2000@3000@2000"
+	},
+	"HUAWEI P40": {
+		"Cmd": "am force-stop com.android.settings@am start com.android.settings@input swipe 800 2000 20 20@input tap 670 2070@input tap 560 1510@input swipe 800 2000 20 200@input tap 500 890@input tap 770 1740@input tap 770 1900@input tap 770 2020",
+		"Timeout": "500@1000@2000@1500@2000@3000@2000"
+	},
+	"HUAWEI Mate 40": {
+		"Cmd": "am force-stop com.android.settings@am start com.android.settings@input swipe 800 2000 20 20@input tap 560 2050@input tap 560 2000@input swipe 560 2000 560 500@input tap 560 800@input tap 560 1780@input tap 560 1950@input tap 560 2080",
+		"Timeout": "500@1000@2000@1500@2000@3000@2000"
+	},
+	"HUAWEI Mate 40 Pro": {
+		"Cmd": "am force-stop com.android.settings@am start com.android.settings@input swipe 800 2000 20 20@input tap 560 2046@input tap 560 2000@input swipe 560 2000 560 500@input tap 560 820@input tap 560 1780@input tap 560 1950@input tap 560 2080",
+		"Timeout": "500@1000@2000@1500@2000@3000@2000"
+	},
+	"Xiaomi 13 Pro": {
+		"Cmd": "am force-stop com.android.settings@am start com.android.settings@input tap 500 1150@input swipe 800 2000 20 20@input tap 360 2290@input swipe 800 2000 20 20@input tap 360 2290@input tap 560 1860@input tap 560 2000@input tap 560 2140",
+		"Timeout": "500@1000@2000@1000@2000@1000@1000"
+	},
+	"Xiaomi 13": {
+		"Cmd": "am force-stop com.android.settings@am start com.android.settings@input tap 500 1150@input swipe 800 2000 20 20@input tap 360 2290@input swipe 800 2000 20 20@input tap 360 2290@input tap 560 1860@input tap 560 2000@input tap 560 2140",
+		"Timeout": "500@1000@2000@1000@2000@1000@1000"
+	}
+}

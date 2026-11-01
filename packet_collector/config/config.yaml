@@ -1,0 +1,7 @@
+iface: wlan0
+tmp_capture_dir: /tmp/packet_collector/captures
+final_capture_dir: captures
+default_file_size_kb: 51200
+default_max_files: 20
+default_direction: in
+default_output_format: jsonl

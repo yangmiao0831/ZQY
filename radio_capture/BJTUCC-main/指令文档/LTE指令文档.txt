@@ -1,0 +1,44 @@
+在 RM520N-GL 的 AT 端口逐条执行：
+
+```text
+AT
+AT+QNWPREFCFG="mode_pref",LTE
+AT+QNWPREFCFG="rat_acq_order",LTE
+AT+QNWPREFCFG="nr5g_disable_mode",1
+AT+CFUN=1,1
+```
+
+执行 `AT+CFUN=1,1` 后串口会断开，这是模块重启的正常现象。等待约 10～30 秒后重新连接 AT 端口。
+
+重启后核查：
+
+```text
+AT+QNWPREFCFG="mode_pref"
+AT+QNWPREFCFG="rat_acq_order"
+AT+QNWPREFCFG="nr5g_disable_mode"
+AT+QNWINFO
+AT+QENG="servingcell"
+AT+QCSQ
+```
+
+期望看到：
+
+```text
++QNWPREFCFG: "mode_pref",LTE
++QNWPREFCFG: "rat_acq_order",LTE
++QNWPREFCFG: "nr5g_disable_mode",1
++QNWINFO: "FDD LTE",...
++QENG: "servingcell","NOCONN","LTE",...
++QCSQ: "LTE",...
+```
+
+如果 `mode_pref=LTE` 返回 `ERROR`，可改用：
+
+```text
+AT+QNWPREFCFG="mode_pref",LTE:NR5G
+AT+QNWPREFCFG="rat_acq_order",LTE
+AT+QNWPREFCFG="nr5g_disable_mode",1
+AT+CFUN=1,1
+```
+
+关键是 `nr5g_disable_mode=1`，它会禁止 NR，仅保留 LTE。参考模块资料页：[RM520N-GL 5G HAT](https://www.waveshare.net/wiki/RM520N-GL_5G_HAT)。

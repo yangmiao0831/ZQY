@@ -1,0 +1,182 @@
+************************************* Invoked: 周二 3月 5 11:01:25 2024
+[0] Arguments: D:\doc\Balong\Agent 3.0.1\agent_ta_base_5.1.530.240123.exe
+[11] Operations sanity check succeeded.
+[12] Language: zh-CN
+[956] Loaded control script ":/metadata/installer-config/configscript_qs.qs"
+[956] Using control script: ":/metadata/installer-config/configscript_qs.qs"
+[960] Starting elevated process "D:\\doc\\Balong\\Agent 3.0.1\\agent_ta_base_5.1.530.240123.exe" with arguments " --start-server PRODUCTION,{73734180-f667-48ed-9071-2b6373fafd15},{c46bf204-9365-4bc3-a801-ff918585b169}"
+[3733] Finished starting elevated process.
+[12908] Preparing meta information download...
+[21989] Installation space required: "67.56 MB" Temporary space required: "0.00 bytes" Local repository size: "0.00 bytes"
+[22001] Tmp and install directories are on the same volume. Volume mount point: "C:\\" Free space available: "72.18 GB"
+[24964] perform  operation: Mkdir
+[24964] 	- arguments: C:/Program Files (x86)/Terminal
+[24967] Done
+[24968] backup  operation: Mkdir
+[24968] 	- arguments: C:/Program Files (x86)/Terminal/AgentSvr
+[24971] Done
+[24971] perform  operation: Mkdir
+[24971] 	- arguments: C:/Program Files (x86)/Terminal/AgentSvr
+[24973] Done
+[24976] Preparing the installation...
+[24976] Install size: 1 components
+[24997] Installing component HiAP
+[24998] "Extract" as admin: true
+[24999] backup com.diag.tools.agent operation: Extract
+[24999] 	- arguments: installer://com.diag.tools.agent/5.0.0audio.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[24999] Done
+[25000] perform com.diag.tools.agent operation: Extract
+[25000] 	- arguments: installer://com.diag.tools.agent/5.0.0audio.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[25029] Done
+[25029] "Extract" as admin: true
+[25029] backup com.diag.tools.agent operation: Extract
+[25029] 	- arguments: installer://com.diag.tools.agent/5.0.0bearer.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[25029] Done
+[25029] perform com.diag.tools.agent operation: Extract
+[25029] 	- arguments: installer://com.diag.tools.agent/5.0.0bearer.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[25050] Done
+[25051] "Extract" as admin: true
+[25051] backup com.diag.tools.agent operation: Extract
+[25052] 	- arguments: installer://com.diag.tools.agent/5.0.0content.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[25052] Done
+[25052] perform com.diag.tools.agent operation: Extract
+[25052] 	- arguments: installer://com.diag.tools.agent/5.0.0content.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26326] Done
+[26327] "Extract" as admin: true
+[26327] backup com.diag.tools.agent operation: Extract
+[26327] 	- arguments: installer://com.diag.tools.agent/5.0.0iconengines.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26327] Done
+[26327] perform com.diag.tools.agent operation: Extract
+[26327] 	- arguments: installer://com.diag.tools.agent/5.0.0iconengines.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26349] Done
+[26350] "Extract" as admin: true
+[26350] backup com.diag.tools.agent operation: Extract
+[26350] 	- arguments: installer://com.diag.tools.agent/5.0.0imageformats.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26350] Done
+[26350] perform com.diag.tools.agent operation: Extract
+[26350] 	- arguments: installer://com.diag.tools.agent/5.0.0imageformats.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26457] Done
+[26457] "Extract" as admin: true
+[26457] backup com.diag.tools.agent operation: Extract
+[26457] 	- arguments: installer://com.diag.tools.agent/5.0.0Manifest.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26457] Done
+[26457] perform com.diag.tools.agent operation: Extract
+[26457] 	- arguments: installer://com.diag.tools.agent/5.0.0Manifest.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26479] Done
+[26479] "Extract" as admin: true
+[26479] backup com.diag.tools.agent operation: Extract
+[26479] 	- arguments: installer://com.diag.tools.agent/5.0.0mediaservice.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26479] Done
+[26479] perform com.diag.tools.agent operation: Extract
+[26480] 	- arguments: installer://com.diag.tools.agent/5.0.0mediaservice.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26517] Done
+[26518] "Extract" as admin: true
+[26518] backup com.diag.tools.agent operation: Extract
+[26518] 	- arguments: installer://com.diag.tools.agent/5.0.0platforms.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26518] Done
+[26518] perform com.diag.tools.agent operation: Extract
+[26518] 	- arguments: installer://com.diag.tools.agent/5.0.0platforms.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26627] Done
+[26628] "Extract" as admin: true
+[26628] backup com.diag.tools.agent operation: Extract
+[26628] 	- arguments: installer://com.diag.tools.agent/5.0.0playlistformats.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26628] Done
+[26628] perform com.diag.tools.agent operation: Extract
+[26628] 	- arguments: installer://com.diag.tools.agent/5.0.0playlistformats.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26651] Done
+[26653] "Extract" as admin: true
+[26653] backup com.diag.tools.agent operation: Extract
+[26653] 	- arguments: installer://com.diag.tools.agent/5.0.0styles.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26653] Done
+[26653] perform com.diag.tools.agent operation: Extract
+[26653] 	- arguments: installer://com.diag.tools.agent/5.0.0styles.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[26680] Done
+[26699] Writing maintenance tool: "C:\\Program Files (x86)\\Terminal\\AgentSvr/uninstall_AgentSvr.exe.new"
+[26699] Writing maintenance tool.
+[27104] Wrote permissions for maintenance tool.
+[27302] Maintenance tool restart: false.
+[27308] Installation finished!
+************************************* Invoked: 周一 12月 30 17:33:00 2024
+[0] Arguments: D:\doc\Balong\HiAgent 3.0.2\agent_ta_base_5.1.770.241220.exe
+[7] Operations sanity check succeeded.
+[8] Language: zh-CN
+[1103] Loaded control script ":/metadata/installer-config/configscript_qs.qs"
+[1103] Using control script: ":/metadata/installer-config/configscript_qs.qs"
+[11537] Preparing meta information download...
+[33903] Installation space required: "71.91 MB" Temporary space required: "0.00 bytes" Local repository size: "0.00 bytes"
+[33906] Tmp and install directories are on the same volume. Volume mount point: "C:\\" Free space available: "31.00 GB"
+[35122] backup  operation: Mkdir
+[35122] 	- arguments: C:/Program Files (x86)/Terminal/AgentSvr
+[35123] Done
+[35123] perform  operation: Mkdir
+[35123] 	- arguments: C:/Program Files (x86)/Terminal/AgentSvr
+[35124] Done
+[35125] Preparing the installation...
+[35125] Install size: 1 components
+[35141] Installing component HiAP
+[35141] backup com.diag.tools.agent operation: Extract
+[35141] 	- arguments: installer://com.diag.tools.agent/5.0.0audio.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[35141] Done
+[35141] perform com.diag.tools.agent operation: Extract
+[35141] 	- arguments: installer://com.diag.tools.agent/5.0.0audio.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[35154] Done
+[35155] backup com.diag.tools.agent operation: Extract
+[35155] 	- arguments: installer://com.diag.tools.agent/5.0.0bearer.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[35155] Done
+[35155] perform com.diag.tools.agent operation: Extract
+[35155] 	- arguments: installer://com.diag.tools.agent/5.0.0bearer.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[35167] Done
+[35168] backup com.diag.tools.agent operation: Extract
+[35168] 	- arguments: installer://com.diag.tools.agent/5.0.0content.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[35168] Done
+[35168] perform com.diag.tools.agent operation: Extract
+[35168] 	- arguments: installer://com.diag.tools.agent/5.0.0content.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36107] Done
+[36108] backup com.diag.tools.agent operation: Extract
+[36108] 	- arguments: installer://com.diag.tools.agent/5.0.0iconengines.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36108] Done
+[36109] perform com.diag.tools.agent operation: Extract
+[36109] 	- arguments: installer://com.diag.tools.agent/5.0.0iconengines.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36120] Done
+[36121] backup com.diag.tools.agent operation: Extract
+[36121] 	- arguments: installer://com.diag.tools.agent/5.0.0imageformats.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36121] Done
+[36121] perform com.diag.tools.agent operation: Extract
+[36121] 	- arguments: installer://com.diag.tools.agent/5.0.0imageformats.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36187] Done
+[36187] backup com.diag.tools.agent operation: Extract
+[36187] 	- arguments: installer://com.diag.tools.agent/5.0.0Manifest.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36187] Done
+[36187] perform com.diag.tools.agent operation: Extract
+[36187] 	- arguments: installer://com.diag.tools.agent/5.0.0Manifest.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36195] Done
+[36196] backup com.diag.tools.agent operation: Extract
+[36196] 	- arguments: installer://com.diag.tools.agent/5.0.0mediaservice.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36196] Done
+[36197] perform com.diag.tools.agent operation: Extract
+[36197] 	- arguments: installer://com.diag.tools.agent/5.0.0mediaservice.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36218] Done
+[36218] backup com.diag.tools.agent operation: Extract
+[36218] 	- arguments: installer://com.diag.tools.agent/5.0.0platforms.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36218] Done
+[36218] perform com.diag.tools.agent operation: Extract
+[36218] 	- arguments: installer://com.diag.tools.agent/5.0.0platforms.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36300] Done
+[36302] backup com.diag.tools.agent operation: Extract
+[36302] 	- arguments: installer://com.diag.tools.agent/5.0.0playlistformats.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36302] Done
+[36302] perform com.diag.tools.agent operation: Extract
+[36302] 	- arguments: installer://com.diag.tools.agent/5.0.0playlistformats.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36312] Done
+[36313] backup com.diag.tools.agent operation: Extract
+[36313] 	- arguments: installer://com.diag.tools.agent/5.0.0styles.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36313] Done
+[36313] perform com.diag.tools.agent operation: Extract
+[36313] 	- arguments: installer://com.diag.tools.agent/5.0.0styles.7z, C:\Program Files (x86)\Terminal\AgentSvr
+[36326] Done
+[36334] Warning: Found binary data file "C:\\Program Files (x86)\\Terminal\\AgentSvr/uninstall_AgentSvr.dat" but deliberately not used. Running as installer requires to read the resources from the application binary.
+[36336] Writing maintenance tool: "C:\\Program Files (x86)\\Terminal\\AgentSvr/uninstall_AgentSvr.exe.new"
+[36336] Writing maintenance tool.
+[36405] Wrote permissions for maintenance tool.
+[36577] Maintenance tool restart: false.
+[36582] Installation finished!

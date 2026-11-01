@@ -1,0 +1,12 @@
+using System.Runtime.CompilerServices;
+using Ee3Y8g8TsQVMvKWq2J;
+
+internal class _003CModule_003E_007BD30C94EB_002D086F_002D4189_002D9D09_002D3EB5E320FBDF_007D
+{
+	[MethodImpl(MethodImplOptions.NoInlining)]
+	static _003CModule_003E_007BD30C94EB_002D086F_002D4189_002D9D09_002D3EB5E320FBDF_007D()
+	{
+		WimNYABWVn5qu6LeHE.Ernc3iKmTf();
+		WimNYABWVn5qu6LeHE.Gs6E0JZODI();
+	}
+}

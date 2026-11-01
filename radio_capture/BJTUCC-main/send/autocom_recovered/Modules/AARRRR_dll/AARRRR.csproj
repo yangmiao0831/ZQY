@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>AARRRR</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net45</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="ULu0QZ4P70brrHtlpM.5compKRU22N1a60GML" />
+    <None Remove="tCWK28HQb0crQSvA4F.NX83W91qAvydVkMvT1" />
+    <None Remove="LXs9BVOXgvhh9nI2jE.s4ZqyGxQHxkevZBn5W" />
+    <None Remove="HVxmYVb8jixJFND6GE.jAxIQfmPfbHvIrIqXM" />
+    <EmbeddedResource Include="ULu0QZ4P70brrHtlpM.5compKRU22N1a60GML" LogicalName="ULu0QZ4P70brrHtlpM.5compKRU22N1a60GML" />
+    <EmbeddedResource Include="tCWK28HQb0crQSvA4F.NX83W91qAvydVkMvT1" LogicalName="tCWK28HQb0crQSvA4F.NX83W91qAvydVkMvT1" />
+    <EmbeddedResource Include="LXs9BVOXgvhh9nI2jE.s4ZqyGxQHxkevZBn5W" LogicalName="LXs9BVOXgvhh9nI2jE.s4ZqyGxQHxkevZBn5W" />
+    <EmbeddedResource Include="HVxmYVb8jixJFND6GE.jAxIQfmPfbHvIrIqXM" LogicalName="HVxmYVb8jixJFND6GE.jAxIQfmPfbHvIrIqXM" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>../../../autocom_extracted/Bin/EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>../../../autocom_extracted/Bin/NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>../../../autocom_extracted/Bin/NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>../../../autocom_extracted/Bin/Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>../../../autocom_extracted/Bin/NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>../../../autocom_extracted/Bin/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word">
+      <HintPath>../../../autocom_extracted/Bin/Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0">
+      <HintPath>../../../autocom_extracted/Bin/Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

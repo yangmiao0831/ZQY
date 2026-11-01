@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>UP</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net40</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="t996fOH09gWVn2KrBA.UbRFsM3G0sO3pSOtMa" />
+    <None Remove="Oe2b5Rqiv4lcbqShuv.fN8IkB9vl7Fop9UZ4b" />
+    <None Remove="ny8GBFAcI5r4rvNacF.C9tQ34VjB95NHlchIy" />
+    <None Remove="lM3voviJhlZmbsbO7J.OJsdTJIwM8m9f7Y9Wh" />
+    <EmbeddedResource Include="t996fOH09gWVn2KrBA.UbRFsM3G0sO3pSOtMa" LogicalName="t996fOH09gWVn2KrBA.UbRFsM3G0sO3pSOtMa" />
+    <EmbeddedResource Include="Oe2b5Rqiv4lcbqShuv.fN8IkB9vl7Fop9UZ4b" LogicalName="Oe2b5Rqiv4lcbqShuv.fN8IkB9vl7Fop9UZ4b" />
+    <EmbeddedResource Include="ny8GBFAcI5r4rvNacF.C9tQ34VjB95NHlchIy" LogicalName="ny8GBFAcI5r4rvNacF.C9tQ34VjB95NHlchIy" />
+    <EmbeddedResource Include="lM3voviJhlZmbsbO7J.OJsdTJIwM8m9f7Y9Wh" LogicalName="lM3voviJhlZmbsbO7J.OJsdTJIwM8m9f7Y9Wh" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ZipStorer">
+      <HintPath>../../../autocom_extracted/Bin/ZipStorer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+    </Reference>
+  </ItemGroup>
+</Project>

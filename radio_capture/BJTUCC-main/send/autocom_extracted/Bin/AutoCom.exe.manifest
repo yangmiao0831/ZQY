@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <assemblyIdentity name="MOXAnalyzer.exe" version="1.1.0.0" processorArchitecture="x86" type="win32" />
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC 清单选项
+            如果要更改 Windows 用户帐户控制级别，请用以下节点之一替换 
+            requestedExecutionLevel 节点。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            指定 requestedExecutionLevel 节点将会禁用文件和注册表虚拟化。
+            如果要利用文件和注册表虚拟化实现向后 
+            兼容性，则删除 requestedExecutionLevel 节点。
+        -->
+        <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <file name="Libs\MapWinGIS.ocx" asmv2:size="5949952">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DRq+o+xkgakOpK2j2GYmgRVUsn0=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" version="4.9" helpdir="D:\MyWork\MainUI\trunk\Bin\MapWinGIS.chm" resourceid="0" flags="CONTROL,HASDISKIMAGE" />
+    <comClass clsid="{130b7aeb-0350-437f-b044-4839aec92f22}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.ShapeEditor.1" description="ShapeEditor Class" />
+    <comClass clsid="{54f4c2f7-ed40-43b7-9d6f-e45965df7f95}" threadingModel="Apartment" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MAPWINGIS.Map.1" description="Map Control" />
+    <comClass clsid="{b4a353e3-d3df-455c-8e4d-cfc937800820}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Grid.1" description="Grid Class" />
+    <comClass clsid="{044afe79-d3de-4500-a14b-decea635b497}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.GridHeader.1" description="GridHeader Class" />
+    <comClass clsid="{86e02063-602c-47f2-9778-81e6979e3267}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.ESRIGridManager.1" description="ESRIGridManager Class" />
+    <comClass clsid="{0db362e3-6f79-4226-af19-47b67b27e99b}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Image.1" description="Image Class" />
+    <comClass clsid="{c0eac9eb-1d02-4bd9-8dab-4bf922c8cd13}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Shapefile.1" description="Shapefile Class" />
+    <comClass clsid="{ce7e6869-6f74-4e9d-9f07-3dcbadab6299}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Shape.1" description="Shape Class" />
+    <comClass clsid="{03f9b3db-637b-4544-bf7a-2f190f821f0d}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Extents.1" description="Extents Class" />
+    <comClass clsid="{ce63ad29-c5eb-4865-b143-e0ac35ed6fbc}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Point.1" description="Point Class" />
+    <comClass clsid="{97efb80f-3638-4bdc-9128-c5a30194c257}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Table.1" description="Table Class" />
+    <comClass clsid="{c2c71e09-3deb-4e6c-b54a-d5613986bffe}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Field.1" description="Field Class" />
+    <comClass clsid="{b655545f-1d9c-4d81-a73c-205fc2c3c4ab}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.ShapeNetwork.1" description="ShapeNetwork Class" />
+    <comClass clsid="{b898877f-dc9e-4fbf-b997-b65dc97b72e9}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Utils.1" description="Utils Class" />
+    <comClass clsid="{d226c4b1-c97c-469d-8cbc-8e3df2139612}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Vector.1" description="Vector Class" />
+    <comClass clsid="{eceb5841-f84e-4dfd-8c96-32216c69c818}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.GridColorScheme.1" description="GridColorScheme Class" />
+    <comClass clsid="{b82b0eb0-05b6-4ff2-aa16-bcd33fde6568}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.GridColorBreak.1" description="GridColorBreak Class" />
+    <comClass clsid="{677b1af6-a28d-4fab-8a5f-0f8763d88638}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Tin.1" description="Tin Class" />
+    <comClass clsid="{58804a7f-2c75-41af-9d32-5bd08db1baf6}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.ShapeDrawingOptions.1" description="ShapeDrawingOptions Class" />
+    <comClass clsid="{cea6b369-f2ec-4927-bd8c-f0f6a4066ec6}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Labels.1" description="Labels Class" />
+    <comClass clsid="{92add941-94c2-4a57-a058-e9999f21d6bf}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.LabelCategory.1" description="LabelCategory Class" />
+    <comClass clsid="{4d745ac7-d623-4f51-ba01-18793fc778a6}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Label.1" description="Label Class" />
+    <comClass clsid="{1a3b0d02-9265-41b0-84bb-9e09f262ff82}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.ShapefileCategories.1" description="ShapefileCategories Class" />
+    <comClass clsid="{51464a2a-69f7-4cad-8728-9608580210a3}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.ShapefileCategory.1" description="ShapefileCategory Class" />
+    <comClass clsid="{1176c871-4c0b-48cf-85b6-926a7948e0f7}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Charts.1" description="Charts Class" />
+    <comClass clsid="{a109a2a1-775f-4fbf-b0c7-f703f8b0bc90}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Chart.1" description="Chart Class" />
+    <comClass clsid="{60409e71-bbb8-491c-a48b-ada7f383cb6e}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.ColorScheme.1" description="ColorScheme Class" />
+    <comClass clsid="{8c429c40-4f0f-479a-b492-98819424801d}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.ChartField.1" description="ChartField Class" />
+    <comClass clsid="{ff695b0c-4977-4d9e-88dd-0df4ff7082bc}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.LinePattern.1" description="LinePattern Class" />
+    <comClass clsid="{03a98c90-70ff-40c7-ad93-6bf8b41b170f}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.LineSegment.1" description="LineSegment Class" />
+    <comClass clsid="{b0828db2-3354-419f-82b0-ac0478ddb00d}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.GeoProjection.1" description="GeoProjection Class" />
+    <comClass clsid="{80cdfee0-576f-4141-906e-877638a2aef3}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.GlobalSettings.1" description="GlobalSettings Class" />
+    <comClass clsid="{9c7b823d-b1be-4c39-a552-8b148c008fc5}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Tiles.1" description="Tiles Class" />
+    <comClass clsid="{f2488d90-90b1-4862-bd16-81144151d284}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.TileProviders.1" description="TileProviders Class" />
+    <comClass clsid="{051deb36-4d72-4d36-a867-313244be17c3}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.Measuring.1" description="Measuring Class" />
+    <comClass clsid="{b8223915-5cdf-4f55-a4b7-7c7293f2ffff}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.ShapeValidationInfo.1" description="ShapeValidationInfo Class" />
+    <comClass clsid="{deca4d77-5191-4b19-9670-ecb9d36e2206}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.FieldStatOperations.1" description="FieldStatOperations Class" />
+    <comClass clsid="{ee5738fa-2dc4-411b-91dc-2e6af5c3543e}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" progid="MapWinGIS.FileManager.1" description="FileManager Class" />
+    <comClass clsid="{33f91d20-8eba-4033-ae3b-15a7041087bb}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{e13d56fe-78ce-4ecd-bf0f-3e9c9ddc73f9}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{0e144eff-81a9-4b83-850c-47d1729331f5}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{9a7caa08-4de0-439f-ba1d-3639513069be}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{85ea46df-fcb8-44a2-bfb0-2f5b0162768d}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{60c40ec8-f1c5-4197-918c-cf2cefcab554}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{b451aa42-a353-4ab0-af0e-88c5bce3b2b6}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{746e104a-61ef-4a32-87c0-744354c06a18}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{3cd18f05-e70d-4846-81f8-98b14cad8fa8}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{0fcbdc95-ac81-4902-90cc-d93b39d45928}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{660e3b2d-d844-4bb3-9050-1d29ee9527b6}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{ca6176e3-b589-437a-920b-99e65b23bd3b}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{2dd50e56-b81b-4456-9b32-6b763cb304e2}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+    <comClass clsid="{ee9a0cda-162c-4663-a48f-a5a29c1071c6}" threadingModel="Both" tlbid="{c368d713-cc5f-40ed-9f53-f84fe197b96a}" />
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- 此应用程序设计使用的所有 Windows 版本的列表。
+      Windows 将会自动选择最兼容的环境。-->
+      <!-- 如果应用程序设计为使用 Windows Vista，请取消注释以下 supportedOS 节点-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- 如果应用程序设计使用 Windows 7，请取消注释以下 supportedOS 节点-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- 如果应用程序设计为使用 Windows 8，请取消注释以下 supportedOS 节点-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+      <!-- 如果应用程序设计为使用 Windows 8.1，请取消对以下 supportedOS 节点的注释-->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>-->
+    </application>
+  </compatibility>
+</assembly>

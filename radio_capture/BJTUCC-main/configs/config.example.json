@@ -1,0 +1,63 @@
+{
+  "runtime": {
+    "python_arch": "x86",
+    "dll_dir": ".\\vendor_runtime\\Bin",
+    "callback_queue_size": 8192
+  },
+  "device": {
+    "eq_id": 268501328,
+    "chip_type": "qualcomm",
+    "eq_type": "ue",
+    "ue_index": 0,
+    "controller_dll": "DDDCXX01.dll",
+    "connect_timeout_ms": 30000,
+    "reconnect": true,
+    "heartbeat_sec": 10,
+    "chip_info_stage": "disabled",
+    "start_log": true,
+    "no_data_timeout_sec": 30,
+    "reconnect_backoff_sec": 2,
+    "max_reconnect_attempts": 3
+  },
+  "ports": {
+    "trace_port": null,
+    "trace_nr_port": null,
+    "at_port": null,
+    "modem_port": null,
+    "net_adapter": null,
+    "adb_port": null,
+    "ue_ip": null,
+    "pc_ip": null,
+    "baud_rate": 115200,
+    "json_config": null
+  },
+  "logmask": {
+    "mode": "qwinlog",
+    "file": "..\\Qwinlog\\conf\\qual\\5GNR_LTE_CN_V9.cfg",
+    "extend_nr": [],
+    "extend_lte": [],
+    "command_type": null,
+    "payload_hex": null
+  },
+  "decoder": {
+    "dispatcher_dll": "DDDIXX00.dll",
+    "expected_plugin": "DDDIXXS0.dll",
+    "codec_module_id": 268501328,
+    "config_id": null
+  },
+  "output": {
+    "raw_dir": "..\\captures",
+    "decoded_jsonl": ".\\data\\decoded.jsonl",
+    "sqlite_file": ".\\data\\radio.db",
+    "nr_metrics_csv": null,
+    "dm_metrics_csv": "..\\captures\\{session_id}\\dm_metrics.csv",
+    "at_metrics_csv": "..\\captures\\{session_id}\\at_metrics.csv",
+    "4g_metrics_csv": "..\\captures\\{session_id}\\4G_metrics.csv",
+    "merged_metrics_csv": "..\\captures\\{session_id}\\merged_metrics.csv",
+    "dm_write_interval_sec": 1.0,
+    "metrics_only": true,
+    "save_ubo": false,
+    "save_dtlog": false,
+    "save_qmdl": false
+  }
+}

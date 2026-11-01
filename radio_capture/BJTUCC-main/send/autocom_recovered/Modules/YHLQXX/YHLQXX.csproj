@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>YHLQXX</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net40</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="6UIwHoc3sPJAk1nTO4.uSMjte97DysNMtR10O" />
+    <None Remove="uKMAO5YK3O85Y7whHc.uw46DePo0yU2QbaUny" />
+    <None Remove="cY1dDyyYpZyAE3MSqL.GJ5WUuoKChsNjjjQbS" />
+    <None Remove="21Hhbvd7fCXH0fNJIf.gRs3PiX9rC4CtIpNJk" />
+    <None Remove="oTBkRDQpqI8EkFXfj5.Na0sGHF4huXyqsqdZA" />
+    <EmbeddedResource Include="6UIwHoc3sPJAk1nTO4.uSMjte97DysNMtR10O" LogicalName="6UIwHoc3sPJAk1nTO4.uSMjte97DysNMtR10O" />
+    <EmbeddedResource Include="uKMAO5YK3O85Y7whHc.uw46DePo0yU2QbaUny" LogicalName="uKMAO5YK3O85Y7whHc.uw46DePo0yU2QbaUny" />
+    <EmbeddedResource Include="cY1dDyyYpZyAE3MSqL.GJ5WUuoKChsNjjjQbS" LogicalName="cY1dDyyYpZyAE3MSqL.GJ5WUuoKChsNjjjQbS" />
+    <EmbeddedResource Include="21Hhbvd7fCXH0fNJIf.gRs3PiX9rC4CtIpNJk" LogicalName="21Hhbvd7fCXH0fNJIf.gRs3PiX9rC4CtIpNJk" />
+    <EmbeddedResource Include="oTBkRDQpqI8EkFXfj5.Na0sGHF4huXyqsqdZA" LogicalName="oTBkRDQpqI8EkFXfj5.Na0sGHF4huXyqsqdZA" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>../../../autocom_extracted/Bin/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ZeroMQ">
+      <HintPath>../../../autocom_extracted/Bin/ZeroMQ.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+    </Reference>
+  </ItemGroup>
+</Project>

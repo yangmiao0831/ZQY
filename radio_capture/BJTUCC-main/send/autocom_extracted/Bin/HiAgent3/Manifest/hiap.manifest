@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<HISTUDIO>
+	<GROUP ID="0x0" NAME="HiAP">
+		<dependency File="sop_cpab.dll" NAME="sop_cpab" SHA256="0" />
+		<dependency File="UCMClient.dll" NAME="UCMClient" SHA256="0" />
+		<dependency File="HiDataMask.dll" NAME="HiDataMask" SHA256="0" />
+		<dependency File="dph.dll" NAME="dph" SHA256="0" />
+		<dependency File="cdbm.dll" NAME="cdbm" SHA256="0" />
+		<dependency File="HiAgent.dll" NAME="HiAgent" SHA256="0" />
+		<dependency File="cliem.cfg" NAME="cliem" SHA256="0" />
+	</GROUP>
+</HISTUDIO>

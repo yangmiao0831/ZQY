@@ -1,0 +1,25 @@
+Set-Location E:\radio_capture
+
+# 查看已安装的 Python
+py -0p
+
+# 必须使用 32 位 Python 3.10
+py -3.10-32 -m venv .venv32
+
+# 激活环境
+.\.venv32\Scripts\Activate.ps1
+
+# 验证 Python 位数
+python -c "import sys, struct; print(sys.executable); print(sys.version); print(struct.calcsize('P') * 8)"
+
+# 安装测试依赖
+python -m pip install --upgrade pip
+python -m pip install "pytest>=8"
+
+# 验证项目导入
+python -c "import radio_capture; print('radio_capture import ok')"
+
+# 验证 DLL 和配置
+python -m radio_capture.cli `
+  --config configs\config.json `
+  --dry-run

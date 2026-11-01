@@ -1,0 +1,12 @@
+{
+  "name": "IoV Data Collector (UE-Stack)",
+  "description": "Professional field collection system for IoV communication diagnostics, featuring full-stack signal monitoring, active measurement, and GNSS tracing.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "network_diagnostics",
+    "mqtt_control",
+    "ota_benchmark"
+  ]
+}

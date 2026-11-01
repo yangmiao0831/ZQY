@@ -1,0 +1,8 @@
+namespace Microsoft.Office.Core;
+
+public enum MsoTextDirection
+{
+	msoTextDirectionMixed = -2,
+	msoTextDirectionLeftToRight = 1,
+	msoTextDirectionRightToLeft = 2
+}

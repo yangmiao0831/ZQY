@@ -1,0 +1,164 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>Spark</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net48</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="q1DxRT7ujQMm9m3JIX.vFTtHKQQDIasnvtFNp" />
+    <None Remove="ZcSju0NtR4ql6X88Nh.CuosaPZ4bqTiqHDPSM" />
+    <None Remove="bI0A7rJEiHKSwcJvXw.tcfoZeeq7OS3mQ9MgH" />
+    <None Remove="Spark.exe.licenses" />
+    <None Remove="RG5ywCuDfF83ALmUY0.qoxuCZn51HeP2LIYdm" />
+    <EmbeddedResource Include="q1DxRT7ujQMm9m3JIX.vFTtHKQQDIasnvtFNp" LogicalName="q1DxRT7ujQMm9m3JIX.vFTtHKQQDIasnvtFNp" />
+    <EmbeddedResource Include="ZcSju0NtR4ql6X88Nh.CuosaPZ4bqTiqHDPSM" LogicalName="ZcSju0NtR4ql6X88Nh.CuosaPZ4bqTiqHDPSM" />
+    <EmbeddedResource Include="bI0A7rJEiHKSwcJvXw.tcfoZeeq7OS3mQ9MgH" LogicalName="bI0A7rJEiHKSwcJvXw.tcfoZeeq7OS3mQ9MgH" />
+    <EmbeddedResource Include="Spark.exe.licenses" LogicalName="Spark.exe.licenses" />
+    <EmbeddedResource Include="RG5ywCuDfF83ALmUY0.qoxuCZn51HeP2LIYdm" LogicalName="RG5ywCuDfF83ALmUY0.qoxuCZn51HeP2LIYdm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="LibUtils">
+      <HintPath>../../autocom_extracted/Bin/LibUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v13.1">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.XtraTreeList.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph">
+      <HintPath>../../autocom_extracted/Bin/ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>../../autocom_extracted/Bin/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Wit.OpenSDK" />
+    <Reference Include="Microsoft.Office.Tools.Base">
+      <HintPath>../../autocom_extracted/Bin/Microsoft.Office.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.1">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.XtraBars.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.1">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.XtraEditors.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.1">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.Utils.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.1">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.Data.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>../../autocom_extracted/Bin/ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Data">
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>../../autocom_extracted/Bin/NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>../../autocom_extracted/Bin/NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.1">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.XtraCharts.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.1.UI">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.XtraCharts.v13.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v13.1">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.XtraGrid.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v13.1.Win">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.XtraGauges.v13.1.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v13.1.Core">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.XtraGauges.v13.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms" />
+    <Reference Include="CefSharp" />
+    <Reference Include="CefSharp.Core" />
+    <Reference Include="websocket-sharp">
+      <HintPath>../../autocom_extracted/Bin/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="NetMQ">
+      <HintPath>../../autocom_extracted/Bin/NetMQ.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>../../autocom_extracted/Bin/ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetSpeech">
+      <HintPath>../../autocom_extracted/Bin/DotNetSpeech.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.MapWinGIS">
+      <HintPath>../../autocom_extracted/Bin/AxInterop.MapWinGIS.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfToImage">
+      <HintPath>../../autocom_extracted/Bin/PdfToImage.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MapWinGIS">
+      <HintPath>../../autocom_extracted/Bin/Interop.MapWinGIS.dll</HintPath>
+    </Reference>
+    <Reference Include="ZipStorer">
+      <HintPath>../../autocom_extracted/Bin/ZipStorer.dll</HintPath>
+    </Reference>
+    <Reference Include="Aliyun.OSS">
+      <HintPath>../../autocom_extracted/Bin/Aliyun.OSS.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v13.1">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.XtraNavBar.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>../../autocom_extracted/Bin/Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.1.Core">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.Printing.v13.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PacanalControl">
+      <HintPath>../../autocom_extracted/Bin/PacanalControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.EARTHLib">
+      <HintPath>../../autocom_extracted/Bin/Interop.EARTHLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v13.1">
+      <HintPath>../../autocom_extracted/Bin/DevExpress.XtraLayout.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet">
+      <HintPath>../../autocom_extracted/Bin/Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="YHUSXX">
+      <HintPath>../../autocom_extracted/Bin/YHUSXX.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="LibreHardwareMonitorLib">
+      <HintPath>../../autocom_extracted/Bin/LibreHardwareMonitorLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AuthLogin">
+      <HintPath>../../autocom_extracted/Bin/AuthLogin.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp">
+      <HintPath>../../autocom_extracted/Bin/OpenCvSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LibUtils">
+      <HintPath>../../autocom_extracted/Bin/LibUtils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

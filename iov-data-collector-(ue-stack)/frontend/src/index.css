@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-diag-bg: #050608;
+  --color-diag-card: #0d1117;
+  --color-diag-accent: #3b82f6;
+  --color-diag-danger: #f43f5e;
+  --color-diag-success: #10b981;
+  --color-diag-warning: #f59e0b;
+}
+
+@layer base {
+  body {
+    @apply bg-diag-bg text-gray-200 font-sans overflow-hidden;
+  }
+}
+
+.diag-card {
+  @apply bg-diag-card/90 backdrop-blur-xl border border-white/10 shadow-lg;
+}
+
+.stat-value {
+  @apply font-mono font-bold tracking-tighter;
+}
+
+.terminal-line {
+  @apply font-mono text-[10px] py-0.5 border-l-2 border-transparent px-2 hover:bg-white/5;
+}
+

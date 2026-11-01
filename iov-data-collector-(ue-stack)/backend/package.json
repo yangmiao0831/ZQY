@@ -1,0 +1,30 @@
+{
+  "name": "rpi-agent",
+  "version": "1.0.0",
+  "description": "Raspberry Pi MQTT Agent Service",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "tsx watch server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@types/ws": "^8.18.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "js-yaml": "^4.1.0",
+    "mqtt": "^5.10.3",
+    "uuid": "^11.0.3",
+    "ws": "^8.21.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.10.1",
+    "@types/uuid": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

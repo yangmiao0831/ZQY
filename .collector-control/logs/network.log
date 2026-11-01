@@ -1,0 +1,1148 @@
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: False
+Video format: mp4
+Merged CSV publish enabled: True
+Config file: D:\ZQY\packet_collector\config.json
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --with-gps --gps-port COM4 --gps-baudrate 115200
+Stopping capture; waiting for queued analysis and CSV finalization...
+Ctrl+C received. Stopping packet capture; pending windows will still be analyzed...
+Capture stopped. Finishing 0 queued analysis window(s)...
+Analysis completed: 19 window(s).
+session_id: session_20261007_151827_605944
+session_dir: D:\ZQY\packet_collector\captures\session_20261007_151827_605944
+capture_filter: host 47.93.192.193 and tcp
+status: interrupted
+pcap_files_count: 1
+window_count: 20
+window_metrics_file: D:\ZQY\packet_collector\captures\session_20261007_151827_605944\window_metrics.jsonl
+window_metrics_csv_file: D:\ZQY\packet_collector\captures\session_20261007_151827_605944\window_metrics_gps.csv
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: False
+Video format: mp4
+Merged CSV publish enabled: True
+Config file: D:\ZQY\packet_collector\config.json
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --with-gps --gps-port COM4 --gps-baudrate 115200
+Stopping capture; waiting for queued analysis and CSV finalization...
+Ctrl+C received. Stopping packet capture; pending windows will still be analyzed...
+Capture stopped. Finishing 0 queued analysis window(s)...
+Analysis completed: 15 window(s).
+session_id: session_20261007_152025_397867
+session_dir: D:\ZQY\packet_collector\captures\session_20261007_152025_397867
+capture_filter: host 47.93.192.193 and tcp
+status: interrupted
+pcap_files_count: 1
+window_count: 16
+window_metrics_file: D:\ZQY\packet_collector\captures\session_20261007_152025_397867\window_metrics.jsonl
+window_metrics_csv_file: D:\ZQY\packet_collector\captures\session_20261007_152025_397867\window_metrics_gps.csv
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: False
+Video format: mp4
+Merged CSV publish enabled: True
+Config file: D:\ZQY\packet_collector\config.json
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --with-gps --gps-port COM4 --gps-baudrate 115200
+Stopping capture; waiting for queued analysis and CSV finalization...
+Ctrl+C received. Stopping packet capture; pending windows will still be analyzed...
+Capture stopped. Finishing 0 queued analysis window(s)...
+Analysis completed: 29 window(s).
+session_id: session_20261007_152307_896453
+session_dir: D:\ZQY\packet_collector\captures\session_20261007_152307_896453
+capture_filter: host 47.93.192.193 and tcp
+status: interrupted
+pcap_files_count: 1
+window_count: 30
+window_metrics_file: D:\ZQY\packet_collector\captures\session_20261007_152307_896453\window_metrics.jsonl
+window_metrics_csv_file: D:\ZQY\packet_collector\captures\session_20261007_152307_896453\window_metrics_gps.csv
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: False
+Video format: mp4
+Merged CSV publish enabled: True
+Config file: D:\ZQY\packet_collector\config.json
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --with-gps --gps-port COM4 --gps-baudrate 115200
+Stopping capture; waiting for queued analysis and CSV finalization...
+Ctrl+C received. Stopping packet capture; pending windows will still be analyzed...
+Capture stopped. Finishing 0 queued analysis window(s)...
+Analysis completed: 11 window(s).
+session_id: session_20261007_152400_551070
+session_dir: D:\ZQY\packet_collector\captures\session_20261007_152400_551070
+capture_filter: host 47.93.192.193 and tcp
+status: interrupted
+pcap_files_count: 1
+window_count: 12
+window_metrics_file: D:\ZQY\packet_collector\captures\session_20261007_152400_551070\window_metrics.jsonl
+window_metrics_csv_file: D:\ZQY\packet_collector\captures\session_20261007_152400_551070\window_metrics_gps.csv
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_153811_960637
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_153811_960637\camera_recording.mp4 --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_153811_960637\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Error: Unable to read a frame from the camera
+Waiting for packet analysis and CSV finalization...
+ERROR: camera process failed with returncode 1
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_154016_143499
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_154016_143499\camera_recording.mp4 --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_154016_143499\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping capture and camera; waiting for CSV finalization...
+Stopping recording...
+Saved 70 frames to D:\ZQY\packet_collector\captures\session_20261007_154016_143499\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_154016_143499
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_154412_144721
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_154412_144721\camera_recording.mp4 --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_154412_144721\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 1056 frames to D:\ZQY\packet_collector\captures\session_20261007_154412_144721\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_154412_144721
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_154625_599797
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_154625_599797\camera_recording.mp4 --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_154625_599797\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 564 frames to D:\ZQY\packet_collector\captures\session_20261007_154625_599797\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_154625_599797
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_154658_969496
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_154658_969496\camera_recording.mp4 --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_154658_969496\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping capture and camera; waiting for CSV finalization...
+Stopping recording...
+Saved 1926 frames to D:\ZQY\packet_collector\captures\session_20261007_154658_969496\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_154658_969496
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_160852_572338
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_160852_572338\camera_recording.mp4 --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_160852_572338\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 1015 frames to D:\ZQY\packet_collector\captures\session_20261007_160852_572338\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_160852_572338
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_161035_507241
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_161035_507241\camera_recording.mp4 --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_161035_507241\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 307 frames to D:\ZQY\packet_collector\captures\session_20261007_161035_507241\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_161035_507241
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_161100_634867
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_161100_634867\camera_recording.mp4 --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_161100_634867\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 687 frames to D:\ZQY\packet_collector\captures\session_20261007_161100_634867\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_161100_634867
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_161141_914850
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_161141_914850\camera_recording.mp4 --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_161141_914850\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 163 frames to D:\ZQY\packet_collector\captures\session_20261007_161141_914850\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_161141_914850
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_161340_970690
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_161340_970690\camera_recording.mp4 --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_161340_970690\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 726 frames to D:\ZQY\packet_collector\captures\session_20261007_161340_970690\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_161340_970690
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_171521_177390
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_171521_177390\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261007_171521_177390\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_171521_177390\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 312 frames to D:\ZQY\packet_collector\captures\session_20261007_171521_177390\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_171521_177390
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_171643_607003
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_171643_607003\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261007_171643_607003\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_171643_607003\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping capture and camera; waiting for CSV finalization...
+Stopping recording...
+Saved 478 frames to D:\ZQY\packet_collector\captures\session_20261007_171643_607003\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_171643_607003
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_171907_474258
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_171907_474258\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261007_171907_474258\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_171907_474258\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping capture and camera; waiting for CSV finalization...
+Stopping recording...
+Saved 65 frames to D:\ZQY\packet_collector\captures\session_20261007_171907_474258\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_171907_474258
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_172502_128972
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_172502_128972\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261007_172502_128972\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_172502_128972\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Saved 57 frames to D:\ZQY\packet_collector\captures\session_20261007_172502_128972\camera_recording.mp4
+Stopping capture and camera; waiting for CSV finalization...
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_172502_128972
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_175732_833548
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_175732_833548\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261007_175732_833548\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_175732_833548\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 109 frames to D:\ZQY\packet_collector\captures\session_20261007_175732_833548\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_175732_833548
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_175809_022923
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_175809_022923\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261007_175809_022923\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_175809_022923\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 257 frames to D:\ZQY\packet_collector\captures\session_20261007_175809_022923\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_175809_022923
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_180140_127218
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_180140_127218\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261007_180140_127218\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_180140_127218\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 85 frames to D:\ZQY\packet_collector\captures\session_20261007_180140_127218\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_180140_127218
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_180231_420097
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_180231_420097\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261007_180231_420097\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_180231_420097\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 221 frames to D:\ZQY\packet_collector\captures\session_20261007_180231_420097\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_180231_420097
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_180441_739139
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_180441_739139\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261007_180441_739139\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_180441_739139\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 191 frames to D:\ZQY\packet_collector\captures\session_20261007_180441_739139\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_180441_739139
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_181130_748475
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_181130_748475\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261007_181130_748475\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_181130_748475\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 122 frames to D:\ZQY\packet_collector\captures\session_20261007_181130_748475\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_181130_748475
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_181206_136197
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261007_181206_136197\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261007_181206_136197\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261007_181206_136197\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping capture and camera; waiting for CSV finalization...
+Stopping recording...
+Saved 64 frames to D:\ZQY\packet_collector\captures\session_20261007_181206_136197\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261007_181206_136197
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_115542_237438
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_115542_237438\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_115542_237438\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_115542_237438\camera_recording.mp4
+Press Ctrl+C to stop recording.
+[ WARN:0@2.894] global cap_msmf.cpp:477 `anonymous-namespace'::SourceReaderCB::OnReadSample videoio(MSMF): OnReadSample() is called with error status: -1072875772
+[ WARN:0@2.895] global cap_msmf.cpp:488 `anonymous-namespace'::SourceReaderCB::OnReadSample videoio(MSMF): async ReadSample() call is failed with error status: -1072875772
+[ WARN:1@2.895] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@2.946] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@2.997] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.048] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.099] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.150] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.201] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.252] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.303] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.354] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.405] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.456] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.507] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.558] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.609] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.660] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.711] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.762] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.813] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.864] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.915] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@3.966] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@4.017] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@4.068] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@4.118] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@4.169] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@4.221] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@4.271] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@4.322] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+[ WARN:1@4.373] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -1072875772
+Error: Unable to read frames from the camera for an extended period
+Waiting for packet analysis and CSV finalization...
+ERROR: camera process failed with returncode 1
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_115644_493547
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_115644_493547\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_115644_493547\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_115644_493547\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 858 frames to D:\ZQY\packet_collector\captures\session_20261008_115644_493547\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_115644_493547
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_115917_380553
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_115917_380553\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_115917_380553\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_115917_380553\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 1401 frames to D:\ZQY\packet_collector\captures\session_20261008_115917_380553\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_115917_380553
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_143144_925564
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_143144_925564\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_143144_925564\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_143144_925564\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 5325 frames to D:\ZQY\packet_collector\captures\session_20261008_143144_925564\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_143144_925564
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_143801_251781
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_143801_251781\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_143801_251781\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_143801_251781\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 3045 frames to D:\ZQY\packet_collector\captures\session_20261008_143801_251781\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_143801_251781
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_144622_741248
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_144622_741248\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_144622_741248\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_144622_741248\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 118 frames to D:\ZQY\packet_collector\captures\session_20261008_144622_741248\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_144622_741248
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 7
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 7 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_145758_769714
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_145758_769714\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_145758_769714\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_145758_769714\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 192 frames to D:\ZQY\packet_collector\captures\session_20261008_145758_769714\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_145758_769714
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_145850_113300
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_145850_113300\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_145850_113300\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_145850_113300\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 4854 frames to D:\ZQY\packet_collector\captures\session_20261008_145850_113300\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_145850_113300
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_150427_830174
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_150427_830174\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_150427_830174\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_150427_830174\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 3809 frames to D:\ZQY\packet_collector\captures\session_20261008_150427_830174\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_150427_830174
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_152900_925417
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_152900_925417\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_152900_925417\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_152900_925417\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping capture and camera; waiting for CSV finalization...
+Stopping recording...
+Saved 3256 frames to D:\ZQY\packet_collector\captures\session_20261008_152900_925417\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_152900_925417
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_155643_710882
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_155643_710882\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_155643_710882\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_155643_710882\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Saved 1752 frames to D:\ZQY\packet_collector\captures\session_20261008_155643_710882\camera_recording.mp4
+Stopping capture and camera; waiting for CSV finalization...
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_155643_710882
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_160327_593709
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_160327_593709\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_160327_593709\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_160327_593709\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 341 frames to D:\ZQY\packet_collector\captures\session_20261008_160327_593709\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_160327_593709
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_171247_308220
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_171247_308220\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_171247_308220\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_171247_308220\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 5854 frames to D:\ZQY\packet_collector\captures\session_20261008_171247_308220\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_171247_308220
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 1.0 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_171944_602612
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261008_171944_602612\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261008_171944_602612\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261008_171944_602612\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 3452 frames to D:\ZQY\packet_collector\captures\session_20261008_171944_602612\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261008_171944_602612
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: False
+Video format: mp4
+Merged CSV publish enabled: True
+Config file: D:\ZQY\packet_collector\config.json
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --window-mode online-analysis --window-seconds 0.4 --window-retention 100 --with-gps --gps-port COM4 --gps-baudrate 115200
+Stopping capture; waiting for queued analysis and CSV finalization...
+Ctrl+C received. Stopping packet capture; pending windows will still be analyzed...
+Capture stopped. Finishing 0 queued analysis window(s)...
+Analysis completed: 42 window(s).
+session_id: session_20261023_143456_169288
+session_dir: D:\ZQY\packet_collector\captures\session_20261023_143456_169288
+capture_filter: host 47.93.192.193 and tcp
+status: interrupted
+pcap_files_count: 1
+window_count: 43
+window_metrics_file: D:\ZQY\packet_collector\captures\session_20261023_143456_169288\window_metrics.jsonl
+window_metrics_csv_file: D:\ZQY\packet_collector\captures\session_20261023_143456_169288\window_metrics_gps.csv
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 0.4 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261023_143823_845750
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261023_143823_845750\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261023_143823_845750\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261023_143823_845750\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping capture and camera; waiting for CSV finalization...
+Stopping recording...
+Saved 870 frames to D:\ZQY\packet_collector\captures\session_20261023_143823_845750\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261023_143823_845750
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 0.4 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261023_143935_346369
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261023_143935_346369\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261023_143935_346369\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261023_143935_346369\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 1482 frames to D:\ZQY\packet_collector\captures\session_20261023_143935_346369\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261023_143935_346369
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 0.4 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261023_144404_423545
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261023_144404_423545\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261023_144404_423545\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261023_144404_423545\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping capture and camera; waiting for CSV finalization...
+Stopping recording...
+Saved 903 frames to D:\ZQY\packet_collector\captures\session_20261023_144404_423545\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261023_144404_423545
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 0.4 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261023_144638_400982
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261023_144638_400982\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261023_144638_400982\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261023_144638_400982\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 1158 frames to D:\ZQY\packet_collector\captures\session_20261023_144638_400982\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261023_144638_400982
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 0.4 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261023_145000_145125
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261023_145000_145125\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261023_145000_145125\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261023_145000_145125\camera_recording.mp4
+Press Ctrl+C to stop recording.
+Stopping recording...
+Stopping capture and camera; waiting for CSV finalization...
+Saved 1227 frames to D:\ZQY\packet_collector\captures\session_20261023_145000_145125\camera_recording.mp4
+Waiting for packet analysis and CSV finalization...
+Capture log: C:\Users\86188\AppData\Local\Temp\packet_collector_capture_with_video.log
+Session directory: D:\ZQY\packet_collector\captures\session_20261023_145000_145125
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 0.4 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261024_201829_176370
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261024_201829_176370\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261024_201829_176370\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261024_201829_176370\camera_recording.mp4
+Press Ctrl+C to stop recording.
+[ WARN:0@3.228] global cap_msmf.cpp:477 `anonymous-namespace'::SourceReaderCB::OnReadSample videoio(MSMF): OnReadSample() is called with error status: -2147024463
+[ WARN:0@3.230] global cap_msmf.cpp:488 `anonymous-namespace'::SourceReaderCB::OnReadSample videoio(MSMF): async ReadSample() call is failed with error status: -2147024463
+[ WARN:1@3.230] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.281] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.332] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.382] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.434] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.484] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.535] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.586] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.637] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.688] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.739] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.790] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.840] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.891] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.942] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.994] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.044] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.095] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.146] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.196] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.247] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.298] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.349] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.400] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.451] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.502] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.554] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.605] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.656] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.707] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+Stopping capture and camera; waiting for CSV finalization...
+Traceback (most recent call last):
+  File "D:\ZQY\packet_collector\video\record_camera.py", line 480, in record_video
+    raise RuntimeError("Unable to read frames from the camera for an extended period")
+RuntimeError: Unable to read frames from the camera for an extended period
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ZQY\packet_collector\video\record_camera.py", line 630, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "D:\ZQY\packet_collector\video\record_camera.py", line 604, in main
+    record_video(
+  File "D:\ZQY\packet_collector\video\record_camera.py", line 541, in record_video
+    preview_server.stop()
+  File "D:\ZQY\packet_collector\video\record_camera.py", line 119, in stop
+    self._server.shutdown()
+  File "D:\Program Files\Python312\Lib\socketserver.py", line 255, in shutdown
+    self.__is_shut_down.wait()
+  File "D:\Program Files\Python312\Lib\threading.py", line 655, in wait
+    signaled = self._cond.wait(timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Program Files\Python312\Lib\threading.py", line 355, in wait
+    waiter.acquire()
+KeyboardInterrupt
+Waiting for packet analysis and CSV finalization...
+ERROR: camera process failed with returncode 3221225786
+Config file: D:\ZQY\packet_collector\config.json
+Platform interface: 6
+Peer IP: 47.93.192.193
+Duration: 3600s
+GPS enabled: True
+Video enabled: True
+Video format: mp4
+Merged CSV publish enabled: True
+Starting packet capture:
+D:\ZQY\zqy\Scripts\python.exe -m packet_collector.cli capture-session tcp --iface 6 --peer-only 47.93.192.193 --duration 3600 --direction both --file-size-kb 51200 --max-files 200 --window-mode online-analysis --window-seconds 0.4 --window-retention 100 --tmp-capture-dir C:\Users\86188\AppData\Local\Temp\packet_collector\captures --final-capture-dir D:\ZQY\packet_collector\captures --with-gps --gps-port COM4 --gps-baudrate 115200
+Session directory: D:\ZQY\packet_collector\captures\session_20261024_201928_950123
+Starting camera:
+D:\ZQY\zqy\Scripts\python.exe D:\ZQY\packet_collector\video\record_camera.py --camera 0 --duration 3600 --fps 20.0 --output D:\ZQY\packet_collector\captures\session_20261024_201928_950123\camera_recording.mp4 --timestamps-file D:\ZQY\packet_collector\captures\session_20261024_201928_950123\camera_frame_timestamps.csv --no-window --no-overlay --preview-host 127.0.0.1 --preview-port 8765 --preview-fps 10
+Browser preview: http://127.0.0.1:8765/stream.mjpg
+Recording camera 0 to D:\ZQY\packet_collector\captures\session_20261024_201928_950123\camera_recording.mp4
+Press Ctrl+C to stop recording.
+[ WARN:0@2.735] global cap_msmf.cpp:477 `anonymous-namespace'::SourceReaderCB::OnReadSample videoio(MSMF): OnReadSample() is called with error status: -2147024463
+[ WARN:0@2.735] global cap_msmf.cpp:488 `anonymous-namespace'::SourceReaderCB::OnReadSample videoio(MSMF): async ReadSample() call is failed with error status: -2147024463
+[ WARN:1@2.736] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@2.786] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@2.837] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@2.888] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@2.939] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@2.990] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.041] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.092] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.142] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.193] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.244] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.295] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.346] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.397] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.448] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.499] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.550] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.600] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.651] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.702] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.753] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.804] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.855] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.906] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@3.957] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.008] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.059] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.110] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.161] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+[ WARN:1@4.212] global cap_msmf.cpp:1816 CvCapture_MSMF::grabFrame videoio(MSMF): can't grab frame. Error: -2147024463
+Error: Unable to read frames from the camera for an extended period
+Waiting for packet analysis and CSV finalization...
+ERROR: camera process failed with returncode 1

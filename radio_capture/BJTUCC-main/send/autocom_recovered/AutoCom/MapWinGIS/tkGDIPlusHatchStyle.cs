@@ -1,0 +1,65 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace MapWinGIS;
+
+[Guid("BE7EA6B6-8667-4E87-BA91-8131314762B1")]
+[TypeIdentifier("c368d713-cc5f-40ed-9f53-f84fe197b96a", "MapWinGIS.tkGDIPlusHatchStyle")]
+[CompilerGenerated]
+public enum tkGDIPlusHatchStyle
+{
+	hsNone = -1,
+	hsHorizontal,
+	hsVertical,
+	hsForwardDiagonal,
+	hsBackwardDiagonal,
+	hsCross,
+	hsDiagonalCross,
+	hsPercent05,
+	hsPercent10,
+	hsPercent20,
+	hsPercent25,
+	hsPercent30,
+	hsPercent40,
+	hsPercent50,
+	hsPercent60,
+	hsPercent70,
+	hsPercent75,
+	hsPercent80,
+	hsPercent90,
+	hsLightDownwardDiagonal,
+	hsLightUpwardDiagonal,
+	hsDarkDownwardDiagonal,
+	hsDarkUpwardDiagonal,
+	hsWideDownwardDiagonal,
+	hsWideUpwardDiagonal,
+	hsLightVertical,
+	hsLightHorizontal,
+	hsNarrowVertical,
+	hsNarrowHorizontal,
+	hsDarkVertical,
+	hsDarkHorizontal,
+	hsDashedDownwardDiagonal,
+	hsDashedUpwardDiagonal,
+	hsDashedHorizontal,
+	hsDashedVertical,
+	hsSmallConfetti,
+	hsLargeConfetti,
+	hsZigZag,
+	hsWave,
+	hsDiagonalBrick,
+	hsHorizontalBrick,
+	hsWeave,
+	hsPlaid,
+	hsDivot,
+	hsDottedGrid,
+	hsDottedDiamond,
+	hsShingle,
+	hsTrellis,
+	hsSphere,
+	hsSmallGrid,
+	hsSmallCheckerBoard,
+	hsLargeCheckerBoard,
+	hsOutlinedDiamond,
+	hsSolidDiamond
+}

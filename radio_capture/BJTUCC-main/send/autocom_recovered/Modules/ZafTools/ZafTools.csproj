@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>ZafTools</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net45</TargetFramework>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="SZt8Ft3woCGHfl7mBh.JigSx7KAO5WZFjRkWN" />
+    <None Remove="9Vqt7bVl6hXY6Jhc4w.bhl7NrBXMlgFJSwjSH" />
+    <None Remove="ZafTools.exe.licenses" />
+    <None Remove="YWDy3hdrYwpsFA6WQb.qjJZr5vtLqDFNWM4yI" />
+    <None Remove="qMYQZGcKfuRQw9aqJT.kjCmG8EdIrp0d2rOHF" />
+    <None Remove="s6LevWkjD3J1hXxHab.RTMMqt2J9EcZYmn1Sb" />
+    <EmbeddedResource Include="SZt8Ft3woCGHfl7mBh.JigSx7KAO5WZFjRkWN" LogicalName="SZt8Ft3woCGHfl7mBh.JigSx7KAO5WZFjRkWN" />
+    <EmbeddedResource Include="9Vqt7bVl6hXY6Jhc4w.bhl7NrBXMlgFJSwjSH" LogicalName="9Vqt7bVl6hXY6Jhc4w.bhl7NrBXMlgFJSwjSH" />
+    <EmbeddedResource Include="ZafTools.exe.licenses" LogicalName="ZafTools.exe.licenses" />
+    <EmbeddedResource Include="YWDy3hdrYwpsFA6WQb.qjJZr5vtLqDFNWM4yI" LogicalName="YWDy3hdrYwpsFA6WQb.qjJZr5vtLqDFNWM4yI" />
+    <EmbeddedResource Include="qMYQZGcKfuRQw9aqJT.kjCmG8EdIrp0d2rOHF" LogicalName="qMYQZGcKfuRQw9aqJT.kjCmG8EdIrp0d2rOHF" />
+    <EmbeddedResource Include="s6LevWkjD3J1hXxHab.RTMMqt2J9EcZYmn1Sb" LogicalName="s6LevWkjD3J1hXxHab.RTMMqt2J9EcZYmn1Sb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.XtraEditors.v13.1">
+      <HintPath>../../../autocom_extracted/Bin/DevExpress.XtraEditors.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.1">
+      <HintPath>../../../autocom_extracted/Bin/DevExpress.Utils.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="ZeroMQ">
+      <HintPath>../../../autocom_extracted/Bin/ZeroMQ.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.1">
+      <HintPath>../../../autocom_extracted/Bin/DevExpress.Data.v13.1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
